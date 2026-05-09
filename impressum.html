@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum – Deponie Berkum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>Impressum</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <a class="back-link" href="index.html">&larr; Zurück zur Startseite</a>
+
+        <article class="legal">
+            <h2>Angaben gemäß § 5 TMG</h2>
+            <p>
+                [Name des Betreibers / Firma]<br>
+                [Straße und Hausnummer]<br>
+                [PLZ Ort]
+            </p>
+
+            <h2>Vertreten durch</h2>
+            <p>[Name der vertretungsberechtigten Person]</p>
+
+            <h2>Kontakt</h2>
+            <p>
+                Telefon: [Telefonnummer]<br>
+                E-Mail: [E-Mail-Adresse]
+            </p>
+
+            <h2>Umsatzsteuer-ID</h2>
+            <p>
+                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
+                [USt-IdNr., falls vorhanden]
+            </p>
+
+            <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+            <p>
+                [Name]<br>
+                [Anschrift]
+            </p>
+
+            <h2>Haftungsausschluss</h2>
+            <p>
+                <strong>Haftung für Inhalte:</strong>
+                Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+            </p>
+            <p>
+                <strong>Haftung für Links:</strong>
+                Unser Angebot enthält ggf. Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
+            </p>
+            <p>
+                <strong>Urheberrecht:</strong>
+                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="jahr"></span> Deponie Berkum</p>
+            <nav>
+                <a href="index.html">Start</a>
+                <span aria-hidden="true">·</span>
+                <a href="datenschutz.html">Datenschutz</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>document.getElementById('jahr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

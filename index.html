@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deponie Berkum</title>
+    <meta name="description" content="Deponie Berkum – Annahme, Öffnungszeiten und Kontakt.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>Deponie Berkum</h1>
+            <p class="tagline">[bitte ergänzen: kurzer Untertitel / Slogan]</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="kontakt" class="card">
+            <h2>Kontakt &amp; Adresse</h2>
+            <address>
+                <strong>Deponie Berkum</strong><br>
+                [Straße und Hausnummer]<br>
+                [PLZ Ort]<br><br>
+                Telefon: <a href="tel:+49000000000">[Telefonnummer]</a><br>
+                E-Mail: <a href="mailto:info@example.com">[E-Mail-Adresse]</a>
+            </address>
+        </section>
+
+        <section id="oeffnungszeiten" class="card">
+            <h2>Öffnungszeiten</h2>
+            <table class="hours">
+                <tr><th>Montag</th><td>[Uhrzeit]</td></tr>
+                <tr><th>Dienstag</th><td>[Uhrzeit]</td></tr>
+                <tr><th>Mittwoch</th><td>[Uhrzeit]</td></tr>
+                <tr><th>Donnerstag</th><td>[Uhrzeit]</td></tr>
+                <tr><th>Freitag</th><td>[Uhrzeit]</td></tr>
+                <tr><th>Samstag</th><td>[Uhrzeit]</td></tr>
+                <tr><th>Sonntag</th><td>geschlossen</td></tr>
+            </table>
+        </section>
+
+        <section id="annahme" class="card">
+            <h2>Was wird angenommen</h2>
+            <ul>
+                <li>[bitte ergänzen, z.&nbsp;B. Bauschutt]</li>
+                <li>[bitte ergänzen, z.&nbsp;B. Grünschnitt]</li>
+                <li>[bitte ergänzen]</li>
+                <li>[bitte ergänzen]</li>
+            </ul>
+            <p class="note">Hinweise zu Preisen und Mengen auf Anfrage.</p>
+        </section>
+
+        <section id="anfahrt" class="card">
+            <h2>Anfahrt</h2>
+            <p>[bitte ergänzen: kurze Wegbeschreibung oder Hinweise zur Anfahrt]</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="jahr"></span> Deponie Berkum</p>
+            <nav>
+                <a href="impressum.html">Impressum</a>
+                <span aria-hidden="true">·</span>
+                <a href="datenschutz.html">Datenschutz</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('jahr').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
