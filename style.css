@@ -68,7 +68,7 @@ body {
 .hero {
     background: var(--color-dark);
     color: #fff;
-    padding: 4rem 0 4.5rem;
+    padding: 4rem 1rem 4.5rem;
     border-bottom: 8px solid var(--color-accent);
     position: relative;
     overflow: hidden;
@@ -93,36 +93,37 @@ body {
 }
 .kicker--light { color: #fff; opacity: 0.85; }
 
-.hero__inner {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-@media (min-width: 720px) {
-    .hero__inner {
-        grid-template-columns: 1fr auto;
-        gap: 2.5rem;
-    }
-}
-
 .hero__stop {
-    width: clamp(140px, 22vw, 220px);
-    margin-left: auto;
+    position: absolute;
+    top: 1.25rem;
+    right: 1rem;
+    width: 80px;
     transform: rotate(-9deg);
-    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
     animation: stop-wobble 4.5s ease-in-out infinite;
+    z-index: 3;
+    pointer-events: none;
 }
 .hero__stop svg {
     width: 100%;
     height: auto;
     display: block;
 }
+@media (min-width: 720px) {
+    .hero__stop {
+        top: 2rem;
+        right: 2rem;
+        width: 130px;
+    }
+}
+@media (min-width: 1024px) {
+    .hero__stop {
+        width: 150px;
+    }
+}
 @keyframes stop-wobble {
     0%, 100% { transform: rotate(-9deg) translateY(0); }
-    50%      { transform: rotate(-7deg) translateY(-4px); }
+    50%      { transform: rotate(-6deg) translateY(-3px); }
 }
 @media (prefers-reduced-motion: reduce) {
     .hero__stop { animation: none; }
