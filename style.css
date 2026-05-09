@@ -93,6 +93,41 @@ body {
 }
 .kicker--light { color: #fff; opacity: 0.85; }
 
+.hero__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+@media (min-width: 720px) {
+    .hero__inner {
+        grid-template-columns: 1fr auto;
+        gap: 2.5rem;
+    }
+}
+
+.hero__stop {
+    width: clamp(140px, 22vw, 220px);
+    margin-left: auto;
+    transform: rotate(-9deg);
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.5));
+    animation: stop-wobble 4.5s ease-in-out infinite;
+}
+.hero__stop svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+@keyframes stop-wobble {
+    0%, 100% { transform: rotate(-9deg) translateY(0); }
+    50%      { transform: rotate(-7deg) translateY(-4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero__stop { animation: none; }
+}
+
 .hero h1 {
     margin: 0 0 1.25rem;
     font-size: clamp(2.4rem, 7vw, 4rem);
