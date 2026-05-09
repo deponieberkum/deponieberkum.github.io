@@ -376,7 +376,7 @@ footer nav a:hover { color: #fff; text-decoration: underline; }
     font-size: 0.95rem;
 }
 
-/* Schematic SVG */
+/* Schematic image */
 .scheme {
     margin: 2rem 0 0.5rem;
     padding: 0;
@@ -386,6 +386,7 @@ footer nav a:hover { color: #fff; text-decoration: underline; }
     overflow: hidden;
     box-shadow: var(--shadow-sm);
 }
+.scheme img,
 .scheme svg {
     display: block;
     width: 100%;
@@ -399,6 +400,43 @@ footer nav a:hover { color: #fff; text-decoration: underline; }
     border-top: 1px solid var(--color-border);
     text-align: center;
 }
+
+/* Banner / group photo section */
+.section--photo {
+    padding: 0;
+    background: var(--color-dark);
+    border-bottom: 8px solid var(--color-accent);
+}
+.banner {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    object-position: center;
+}
+.banner figcaption {
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+    color: #d0d0d0;
+    text-align: center;
+    background: var(--color-dark);
+}
+.banner figcaption strong { color: #fff; }
+
+.credit {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--color-muted);
+    opacity: 0.85;
+}
+.banner .credit { color: #999; }
 
 /* Map */
 .map {
