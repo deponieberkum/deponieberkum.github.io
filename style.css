@@ -270,6 +270,21 @@ strong { font-weight: 700; }
     width: 100%;
 }
 
+/* Alert-Variante: gefährliche Nähe hervorheben */
+.fact--alert {
+    background: #fff5f6;
+    border-color: var(--color-accent);
+    border-top: 4px solid var(--color-accent);
+    position: relative;
+}
+.fact--alert .fact__icon { color: var(--color-accent); }
+.fact--alert .fact__number { color: var(--color-accent-dark); }
+.fact--alert .fact__compare {
+    color: var(--color-accent-dark);
+    border-top-color: rgba(200, 16, 46, 0.3);
+}
+.fact--alert .fact__compare strong { color: var(--color-accent); }
+
 /* Materials (Klasse II) */
 .materials {
     display: grid;
