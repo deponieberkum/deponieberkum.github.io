@@ -98,11 +98,13 @@ body {
     top: 1.25rem;
     right: 1rem;
     width: 80px;
-    transform: rotate(-9deg);
-    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
-    animation: stop-wobble 4.5s ease-in-out infinite;
     z-index: 3;
     pointer-events: none;
+    transform-origin: center center;
+    animation:
+        stop-enter 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) both,
+        stop-wobble 2.6s ease-in-out 0.9s infinite,
+        stop-glow 1.5s ease-in-out 0.9s infinite;
 }
 .hero__stop svg {
     width: 100%;
@@ -121,12 +123,40 @@ body {
         width: 150px;
     }
 }
-@keyframes stop-wobble {
-    0%, 100% { transform: rotate(-9deg) translateY(0); }
-    50%      { transform: rotate(-6deg) translateY(-3px); }
+
+@keyframes stop-enter {
+    0%   { transform: rotate(-180deg) scale(0); opacity: 0; }
+    60%  { transform: rotate(8deg)    scale(1.15); opacity: 1; }
+    80%  { transform: rotate(-14deg)  scale(0.96); }
+    100% { transform: rotate(-9deg)   scale(1); }
 }
+
+@keyframes stop-wobble {
+    0%, 100% { transform: rotate(-9deg)  scale(1)    translateY(0); }
+    25%      { transform: rotate(-13deg) scale(1.03) translateY(-2px); }
+    50%      { transform: rotate(-5deg)  scale(1)    translateY(0); }
+    75%      { transform: rotate(-12deg) scale(1.03) translateY(-2px); }
+}
+
+@keyframes stop-glow {
+    0%, 100% {
+        filter:
+            drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5))
+            drop-shadow(0 0 0   rgba(200, 16, 46, 0));
+    }
+    50% {
+        filter:
+            drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5))
+            drop-shadow(0 0 22px rgba(200, 16, 46, 0.95));
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
-    .hero__stop { animation: none; }
+    .hero__stop {
+        animation: none;
+        transform: rotate(-9deg);
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+    }
 }
 
 .hero h1 {
