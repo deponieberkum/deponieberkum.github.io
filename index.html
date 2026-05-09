@@ -9,6 +9,7 @@
     <meta property="og:description" content="Bürgerinitiative gegen die Reaktivierung der alten Peiner-Träger-Deponie bei Berkum.">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 </head>
 <body>
     <a href="#inhalt" class="skip-link">Zum Inhalt springen</a>
@@ -46,6 +47,99 @@
                 <h2 class="section__title">Worum es geht</h2>
                 <p>Die alte, längst überwucherte <strong>Peiner-Träger-Deponie</strong> am Eck von Mittellandkanal und Bundesstraße 65 – nur rund 500 Meter von Peine-Horst entfernt – soll als Deponie der <strong>Klasse II</strong> reaktiviert werden. Verantwortlich: die <em>Strabag AG</em> gemeinsam mit der Firma <em>Bettels</em> aus Hildesheim, betrieben durch die <em>HK Rohstoff &amp; Umwelttechnik</em>.</p>
                 <p>Geplant ist eine Aufschüttung von <strong>30 bis 35 Metern Höhe</strong> – höher als das Peiner Rathaus. Die Laufzeit: <strong>mindestens 20 Jahre</strong>. Auf dem rund 10 Hektar großen Gelände sollen rund <strong>eine Million Kubikmeter</strong> mineralische Abfälle eingelagert werden – darunter Bauschutt, Gips, Teer und potenziell auch Asbestplatten.</p>
+
+                <figure class="scheme">
+                    <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="scheme-title scheme-desc">
+                        <title id="scheme-title">Größenvergleich: geplante Halde und Peiner Rathaus</title>
+                        <desc id="scheme-desc">Schematische Darstellung der geplanten 30 bis 35 Meter hohen Deponie-Halde im Größenvergleich zum etwa 30 Meter hohen Peiner Rathaus.</desc>
+
+                        <!-- Sky -->
+                        <rect x="0" y="0" width="800" height="280" fill="#eef2f5"/>
+                        <!-- Sun hint -->
+                        <circle cx="700" cy="55" r="22" fill="#fef3c7" opacity="0.7"/>
+
+                        <!-- Reference height line at 30m -->
+                        <line x1="0" y1="60" x2="800" y2="60" stroke="#c8102e" stroke-width="1" stroke-dasharray="6 6"/>
+                        <text x="10" y="54" font-family="sans-serif" font-size="13" fill="#c8102e" font-weight="700">30 m</text>
+
+                        <!-- Trees on the left -->
+                        <g fill="#1f5f1f" opacity="0.85">
+                            <ellipse cx="40" cy="240" rx="14" ry="22"/>
+                            <ellipse cx="68" cy="245" rx="12" ry="18"/>
+                        </g>
+
+                        <!-- Peiner Rathaus (silhouette, ca. 30 m) -->
+                        <g>
+                            <rect x="130" y="65" width="120" height="215" fill="#3b3b3b"/>
+                            <!-- Tower -->
+                            <rect x="170" y="35" width="40" height="30" fill="#3b3b3b"/>
+                            <polygon points="170,35 190,15 210,35" fill="#3b3b3b"/>
+                            <!-- Windows -->
+                            <g fill="#cfd8e3">
+                                <rect x="142" y="90" width="10" height="14"/>
+                                <rect x="160" y="90" width="10" height="14"/>
+                                <rect x="178" y="90" width="10" height="14"/>
+                                <rect x="196" y="90" width="10" height="14"/>
+                                <rect x="214" y="90" width="10" height="14"/>
+                                <rect x="232" y="90" width="10" height="14"/>
+                                <rect x="142" y="120" width="10" height="14"/>
+                                <rect x="160" y="120" width="10" height="14"/>
+                                <rect x="178" y="120" width="10" height="14"/>
+                                <rect x="196" y="120" width="10" height="14"/>
+                                <rect x="214" y="120" width="10" height="14"/>
+                                <rect x="232" y="120" width="10" height="14"/>
+                                <rect x="142" y="150" width="10" height="14"/>
+                                <rect x="160" y="150" width="10" height="14"/>
+                                <rect x="178" y="150" width="10" height="14"/>
+                                <rect x="196" y="150" width="10" height="14"/>
+                                <rect x="214" y="150" width="10" height="14"/>
+                                <rect x="232" y="150" width="10" height="14"/>
+                                <rect x="142" y="180" width="10" height="14"/>
+                                <rect x="160" y="180" width="10" height="14"/>
+                                <rect x="178" y="180" width="10" height="14"/>
+                                <rect x="196" y="180" width="10" height="14"/>
+                                <rect x="214" y="180" width="10" height="14"/>
+                                <rect x="232" y="180" width="10" height="14"/>
+                            </g>
+                            <text x="190" y="305" font-family="sans-serif" font-size="13" fill="#3b3b3b" text-anchor="middle" font-weight="600">Peiner Rathaus</text>
+                            <text x="190" y="320" font-family="sans-serif" font-size="11" fill="#5b5b5b" text-anchor="middle">ca. 30 m</text>
+                        </g>
+
+                        <!-- Planned heap (30-35 m) -->
+                        <g>
+                            <!-- Heap body -->
+                            <polygon points="380,280 460,55 660,40 720,280" fill="#0f0f0f"/>
+                            <!-- Surface lines -->
+                            <line x1="395" y1="260" x2="710" y2="260" stroke="#3a3a3a" stroke-width="1"/>
+                            <line x1="410" y1="220" x2="700" y2="220" stroke="#3a3a3a" stroke-width="1"/>
+                            <line x1="425" y1="180" x2="690" y2="180" stroke="#3a3a3a" stroke-width="1"/>
+                            <line x1="440" y1="140" x2="675" y2="140" stroke="#3a3a3a" stroke-width="1"/>
+                            <line x1="455" y1="100" x2="660" y2="100" stroke="#3a3a3a" stroke-width="1"/>
+
+                            <!-- LKW on top -->
+                            <g transform="translate(540, 22)">
+                                <rect x="0" y="6" width="36" height="14" fill="#c8102e"/>
+                                <rect x="36" y="2" width="14" height="18" fill="#c8102e"/>
+                                <circle cx="8" cy="22" r="3" fill="#1a1a1a"/>
+                                <circle cx="20" cy="22" r="3" fill="#1a1a1a"/>
+                                <circle cx="44" cy="22" r="3" fill="#1a1a1a"/>
+                            </g>
+
+                            <!-- Height arrows -->
+                            <line x1="745" y1="40" x2="745" y2="280" stroke="#c8102e" stroke-width="2"/>
+                            <polygon points="745,40 740,50 750,50" fill="#c8102e"/>
+                            <polygon points="745,280 740,270 750,270" fill="#c8102e"/>
+                            <text x="755" y="160" font-family="sans-serif" font-size="14" fill="#c8102e" font-weight="700">30–35 m</text>
+
+                            <text x="550" y="305" font-family="sans-serif" font-size="13" fill="#0f0f0f" text-anchor="middle" font-weight="600">Geplante Halde</text>
+                            <text x="550" y="320" font-family="sans-serif" font-size="11" fill="#5b5b5b" text-anchor="middle">~1 Million m³</text>
+                        </g>
+
+                        <!-- Ground -->
+                        <rect x="0" y="280" width="800" height="40" fill="#7a8a72"/>
+                    </svg>
+                    <figcaption>Schematische Darstellung – die geplante Halde überragt das Peiner Rathaus.</figcaption>
+                </figure>
             </div>
         </section>
 
@@ -77,6 +171,9 @@
             <div class="container">
                 <h2 class="section__title">So nah ist die Deponie</h2>
                 <p class="section__intro">Die Hauptwindrichtung in Deutschland ist Westwind – Staub und Emissionen ziehen direkt in Richtung Peine.</p>
+
+                <div id="map" class="map" aria-label="Karte: Lage der geplanten Deponie und Entfernungen zur Wohnbebauung"></div>
+
                 <table class="distances">
                     <tbody>
                         <tr><th>Nächstes bewohntes Haus (Langer Damm, Handorf)</th><td>330&nbsp;m</td></tr>
@@ -168,6 +265,70 @@
 
     <script>
         document.getElementById('jahr').textContent = new Date().getFullYear();
+    </script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script>
+        // ============================================================
+        // KARTE — Leaflet + OpenStreetMap
+        // ------------------------------------------------------------
+        // ACHTUNG: Die Koordinaten unten sind Schaetzwerte rund um
+        // Peine-Horst / Mittellandkanal x B65. Bitte vor Veroeffent-
+        // lichung mit dem tatsaechlichen Standort abgleichen!
+        // Tipp: Auf openstreetmap.org Punkt rechts-anklicken ->
+        // "Adresse anzeigen" liefert Lat/Lon.
+        // ============================================================
+
+        var DEPONIE     = [52.3275, 10.2050]; // TODO: Koordinaten verifizieren
+        var HAUS_NAH    = [52.3252, 10.2110]; // Langer Damm, Handorf — naechstes Wohnhaus (330 m)
+        var KREISHAUS   = [52.3242, 10.2155]; // Werner-Nordmeyer-Strasse / Kreishaus 2 (450 m)
+        var HOLLANDSM   = [52.3232, 10.2025]; // Hollandsmuehle (590 m)
+        var BERKUM      = [52.3215, 10.2030]; // Berkum (730 m)
+        var KIEBITZMOOR = [52.3225, 10.1985]; // Kiebitzmoor / Ginsterweg (750 m)
+        var HANDORF     = [52.3195, 10.2125]; // Handorf erste Haeuser (ab 900 m)
+
+        var map = L.map('map', { scrollWheelZoom: false }).setView([52.3235, 10.2070], 14);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende'
+        }).addTo(map);
+
+        // Deponie-Marker (rot, hervorgehoben)
+        var deponieIcon = L.divIcon({
+            className: 'deponie-marker',
+            html: '<div class="pin pin--deponie"><span>D</span></div>',
+            iconSize: [32, 32],
+            iconAnchor: [16, 32]
+        });
+        L.marker(DEPONIE, { icon: deponieIcon })
+            .addTo(map)
+            .bindPopup('<strong>Geplante Deponie</strong><br>Mittellandkanal &times; B65');
+
+        // 200-m-Radius um die Deponie zur Veranschaulichung
+        L.circle(DEPONIE, {
+            radius: 200,
+            color: '#c8102e',
+            fillColor: '#c8102e',
+            fillOpacity: 0.12,
+            weight: 1
+        }).addTo(map);
+
+        function poiIcon() {
+            return L.divIcon({
+                className: 'poi-marker',
+                html: '<div class="pin pin--poi"></div>',
+                iconSize: [16, 16],
+                iconAnchor: [8, 8]
+            });
+        }
+
+        L.marker(HAUS_NAH,    { icon: poiIcon() }).addTo(map).bindPopup('<strong>Naechstes Wohnhaus</strong><br>Langer Damm, Handorf — 330 m');
+        L.marker(KREISHAUS,   { icon: poiIcon() }).addTo(map).bindPopup('<strong>Kreishaus 2</strong><br>Werner-Nordmeyer-Strasse — 450 m');
+        L.marker(HOLLANDSM,   { icon: poiIcon() }).addTo(map).bindPopup('<strong>Hollandsmuehle</strong><br>Vater-Jahn-Platz / Tennisanlage — 590 m');
+        L.marker(BERKUM,      { icon: poiIcon() }).addTo(map).bindPopup('<strong>Berkum</strong><br>730 m');
+        L.marker(KIEBITZMOOR, { icon: poiIcon() }).addTo(map).bindPopup('<strong>Kiebitzmoor / Ginsterweg</strong><br>750 m');
+        L.marker(HANDORF,     { icon: poiIcon() }).addTo(map).bindPopup('<strong>Handorf</strong><br>erste Haeuser — ab 900 m');
     </script>
 </body>
 </html>
