@@ -1,18 +1,18 @@
-# Deponie Berkum
+# Keine Deponie in Berkum
 
-Statische Webseite für die Deponie Berkum, gehostet via GitHub Pages unter <https://deponieberkum.github.io>.
+Webseite der Bürgerinitiative gegen die Reaktivierung der alten Peiner-Träger-Deponie bei Berkum. Gehostet via GitHub Pages unter <https://deponieberkum.github.io>.
 
 ## Bearbeiten
 
-Die Seite besteht aus reinem HTML/CSS — keine Build-Tools nötig.
+Reines HTML/CSS, keine Build-Tools.
 
-- `index.html` – Startseite (Visitenkarte)
+- `index.html` – Startseite mit Fakten, Risiken und Termin-Hinweis
 - `impressum.html` – Impressum
 - `datenschutz.html` – Datenschutzerklärung
 - `style.css` – Styles
 
-Platzhalter sind als `[bitte ergänzen]` bzw. `[…]` markiert und müssen vor Veröffentlichung gefüllt werden.
+Platzhalter sind als `[…]` markiert (Kontakt, Impressum-Daten) und müssen vor öffentlicher Bewerbung gefüllt werden.
 
 ## Deployment
 
-Push auf `main` veröffentlicht automatisch via GitHub Pages.
+`git push` auf `main` veröffentlicht automatisch via GitHub Pages.
