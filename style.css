@@ -432,6 +432,29 @@ strong { font-weight: 700; }
     margin-top: 0.1rem;
 }
 
+/* Newsletter */
+.newsletter {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+.newsletter iframe {
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    border: 0;
+}
+.newsletter__note {
+    margin-top: 1rem !important;
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    text-align: center;
+}
+
 /* Contact list */
 .contact__name {
     font-weight: 600;
