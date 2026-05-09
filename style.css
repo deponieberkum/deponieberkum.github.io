@@ -383,6 +383,34 @@ strong { font-weight: 700; }
 }
 .fact--alert .fact__compare strong { color: var(--color-accent); }
 
+/* Klasse-II Foto */
+.klasse-photo {
+    margin: 1.25rem 0 1.75rem;
+    padding: 0;
+    background: var(--color-dark);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+}
+.klasse-photo img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    object-position: center;
+}
+.klasse-photo figcaption {
+    padding: 0.7rem 1rem;
+    font-size: 0.92rem;
+    color: #d0d0d0;
+    background: var(--color-dark);
+    text-align: center;
+}
+.klasse-photo .credit {
+    color: #999;
+}
+
 /* Materials (Klasse II) */
 .materials {
     display: grid;
