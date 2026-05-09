@@ -272,29 +272,22 @@
         // ============================================================
         // KARTE — Leaflet + OpenStreetMap
         // ------------------------------------------------------------
-        // ACHTUNG: Die Koordinaten unten sind Schaetzwerte rund um
-        // Peine-Horst / Mittellandkanal x B65. Bitte vor Veroeffent-
-        // lichung mit dem tatsaechlichen Standort abgleichen!
-        // Tipp: Auf openstreetmap.org Punkt rechts-anklicken ->
-        // "Adresse anzeigen" liefert Lat/Lon.
+        // Deponie-Koordinate verifiziert (vom Auftraggeber).
+        // Weitere Orte (Wohnhaus, Berkum, Handorf, Kreishaus,
+        // Kiebitzmoor, Hollandsmuehle) noch ohne echte Koordinaten —
+        // bitte nachliefern und in den auskommentierten Block unten
+        // einsetzen, dann die L.marker(...)-Aufrufe aktivieren.
         // ============================================================
 
-        var DEPONIE     = [52.3275, 10.2050]; // TODO: Koordinaten verifizieren
-        var HAUS_NAH    = [52.3252, 10.2110]; // Langer Damm, Handorf — naechstes Wohnhaus (330 m)
-        var KREISHAUS   = [52.3242, 10.2155]; // Werner-Nordmeyer-Strasse / Kreishaus 2 (450 m)
-        var HOLLANDSM   = [52.3232, 10.2025]; // Hollandsmuehle (590 m)
-        var BERKUM      = [52.3215, 10.2030]; // Berkum (730 m)
-        var KIEBITZMOOR = [52.3225, 10.1985]; // Kiebitzmoor / Ginsterweg (750 m)
-        var HANDORF     = [52.3195, 10.2125]; // Handorf erste Haeuser (ab 900 m)
+        var DEPONIE = [52.30726576707336, 10.204721449129488];
 
-        var map = L.map('map', { scrollWheelZoom: false }).setView([52.3235, 10.2070], 14);
+        var map = L.map('map', { scrollWheelZoom: false }).setView(DEPONIE, 15);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende'
         }).addTo(map);
 
-        // Deponie-Marker (rot, hervorgehoben)
         var deponieIcon = L.divIcon({
             className: 'deponie-marker',
             html: '<div class="pin pin--deponie"><span>D</span></div>',
@@ -305,30 +298,47 @@
             .addTo(map)
             .bindPopup('<strong>Geplante Deponie</strong><br>Mittellandkanal &times; B65');
 
-        // 200-m-Radius um die Deponie zur Veranschaulichung
-        L.circle(DEPONIE, {
-            radius: 200,
-            color: '#c8102e',
-            fillColor: '#c8102e',
-            fillOpacity: 0.12,
-            weight: 1
-        }).addTo(map);
+        // Distanz-Ringe um die Deponie zur Veranschaulichung
+        var rings = [
+            { r: 330,  label: '330 m' },
+            { r: 750,  label: '750 m' },
+            { r: 1300, label: '1,3 km' }
+        ];
+        rings.forEach(function (ring, i) {
+            L.circle(DEPONIE, {
+                radius: ring.r,
+                color: '#c8102e',
+                fillColor: '#c8102e',
+                fillOpacity: 0.04 + (rings.length - i) * 0.02,
+                weight: 1,
+                dashArray: '4 4'
+            }).addTo(map).bindTooltip(ring.label, { permanent: false, direction: 'top' });
+        });
 
-        function poiIcon() {
-            return L.divIcon({
-                className: 'poi-marker',
-                html: '<div class="pin pin--poi"></div>',
-                iconSize: [16, 16],
-                iconAnchor: [8, 8]
-            });
-        }
-
-        L.marker(HAUS_NAH,    { icon: poiIcon() }).addTo(map).bindPopup('<strong>Naechstes Wohnhaus</strong><br>Langer Damm, Handorf — 330 m');
-        L.marker(KREISHAUS,   { icon: poiIcon() }).addTo(map).bindPopup('<strong>Kreishaus 2</strong><br>Werner-Nordmeyer-Strasse — 450 m');
-        L.marker(HOLLANDSM,   { icon: poiIcon() }).addTo(map).bindPopup('<strong>Hollandsmuehle</strong><br>Vater-Jahn-Platz / Tennisanlage — 590 m');
-        L.marker(BERKUM,      { icon: poiIcon() }).addTo(map).bindPopup('<strong>Berkum</strong><br>730 m');
-        L.marker(KIEBITZMOOR, { icon: poiIcon() }).addTo(map).bindPopup('<strong>Kiebitzmoor / Ginsterweg</strong><br>750 m');
-        L.marker(HANDORF,     { icon: poiIcon() }).addTo(map).bindPopup('<strong>Handorf</strong><br>erste Haeuser — ab 900 m');
+        // ------------------------------------------------------------
+        // Weitere Marker — Koordinaten bitte ergaenzen, dann den
+        // Block aktivieren (Kommentarstriche entfernen):
+        // ------------------------------------------------------------
+        // function poiIcon() {
+        //     return L.divIcon({
+        //         className: 'poi-marker',
+        //         html: '<div class="pin pin--poi"></div>',
+        //         iconSize: [16, 16],
+        //         iconAnchor: [8, 8]
+        //     });
+        // }
+        // var HAUS_NAH    = [LAT, LON]; // Langer Damm, Handorf — 330 m
+        // var KREISHAUS   = [LAT, LON]; // Werner-Nordmeyer-Strasse / Kreishaus 2 — 450 m
+        // var HOLLANDSM   = [LAT, LON]; // Hollandsmuehle / Vater-Jahn-Platz — 590 m
+        // var BERKUM      = [LAT, LON]; // Berkum — 730 m
+        // var KIEBITZMOOR = [LAT, LON]; // Kiebitzmoor / Ginsterweg — 750 m
+        // var HANDORF     = [LAT, LON]; // Handorf erste Haeuser — ab 900 m
+        // L.marker(HAUS_NAH,    { icon: poiIcon() }).addTo(map).bindPopup('<strong>Naechstes Wohnhaus</strong><br>Langer Damm, Handorf — 330 m');
+        // L.marker(KREISHAUS,   { icon: poiIcon() }).addTo(map).bindPopup('<strong>Kreishaus 2</strong><br>Werner-Nordmeyer-Strasse — 450 m');
+        // L.marker(HOLLANDSM,   { icon: poiIcon() }).addTo(map).bindPopup('<strong>Hollandsmuehle</strong><br>Vater-Jahn-Platz / Tennisanlage — 590 m');
+        // L.marker(BERKUM,      { icon: poiIcon() }).addTo(map).bindPopup('<strong>Berkum</strong><br>730 m');
+        // L.marker(KIEBITZMOOR, { icon: poiIcon() }).addTo(map).bindPopup('<strong>Kiebitzmoor / Ginsterweg</strong><br>750 m');
+        // L.marker(HANDORF,     { icon: poiIcon() }).addTo(map).bindPopup('<strong>Handorf</strong><br>erste Haeuser — ab 900 m');
     </script>
 </body>
 </html>
