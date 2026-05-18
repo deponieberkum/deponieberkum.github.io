@@ -251,8 +251,19 @@
                         <tr><th>Berkum</th><td>730&nbsp;m</td></tr>
                         <tr><th>Wohngebiet Kiebitzmoor / Ginsterweg</th><td>750&nbsp;m</td></tr>
                         <tr><th>Handorf (erste Häuser)</th><td>ab 900&nbsp;m</td></tr>
+                        <tr class="distances__divider"><th colspan="2">Im 3-km-Umkreis – bei Sturm/Wirbel relevant?</th></tr>
+                        <tr><th>Handorf (Zentrum)</th><td>ca. 1,7&nbsp;km</td></tr>
+                        <tr><th>Rosenthal</th><td>ca. 2,5&nbsp;km</td></tr>
+                        <tr><th>Schwicheldt (Süd)</th><td>ca. 3,7&nbsp;km</td></tr>
                     </tbody>
                 </table>
+
+                <aside class="storm-note">
+                    <h3>Bei Sturm: Wie weit reichen die Stäube wirklich?</h3>
+                    <p>Die Hauptwindrichtung ist Westwind. Aber bei Sturm, drehenden Tiefs oder Wirbeln entlang von B65 und Mittellandkanal können Asbestfasern und Feinstaub auch andere Richtungen erreichen – und deutlich weiter als 1,3&nbsp;km.</p>
+                    <p>Das <strong>Umweltbundesamt</strong> sagt selbst: „Zu Asbestfasern in der Außenluft liegen bisher keine wissenschaftlichen Ergebnisse vor." Für die Genehmigung schreibt die <strong>TA Luft</strong> eine Immissionsprognose mit Ausbreitungsrechnung vor. Das <strong>Gewerbeaufsichtsamt Braunschweig</strong> hat gegenüber der PAZ am 10.05.2026 bestätigt: „Noch lägen keine Umweltgutachten zu Themen wie Lärm, Staub und Klima vor."</p>
+                    <p class="storm-note__question"><strong>Wir fragen:</strong> Erfasst die noch ausstehende Ausbreitungsrechnung auch Sturm-Szenarien? Sind Handorf-Mitte, Rosenthal und Süd-Schwicheldt im 3-km-Umkreis mitgeprüft?</p>
+                </aside>
             </div>
         </section>
 
@@ -457,7 +468,7 @@
 
         var DEPONIE = [52.30726576707336, 10.204721449129488];
 
-        var map = L.map('map', { scrollWheelZoom: false }).setView(DEPONIE, 15);
+        var map = L.map('map', { scrollWheelZoom: false }).setView(DEPONIE, 14);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -478,17 +489,30 @@
         var rings = [
             { r: 330,  label: '330 m' },
             { r: 750,  label: '750 m' },
-            { r: 1300, label: '1,3 km' }
+            { r: 1300, label: '1,3 km' },
+            { r: 3000, label: 'bei Sturm? (3 km)', stormScenario: true }
         ];
         rings.forEach(function (ring, i) {
-            L.circle(DEPONIE, {
-                radius: ring.r,
-                color: '#c8102e',
-                fillColor: '#c8102e',
-                fillOpacity: 0.04 + (rings.length - i) * 0.02,
-                weight: 1,
-                dashArray: '4 4'
-            }).addTo(map).bindTooltip(ring.label, { permanent: false, direction: 'top' });
+            if (ring.stormScenario) {
+                L.circle(DEPONIE, {
+                    radius: ring.r,
+                    color: '#c8102e',
+                    fillColor: '#c8102e',
+                    fillOpacity: 0.02,
+                    weight: 1,
+                    dashArray: '8 6',
+                    opacity: 0.7
+                }).addTo(map).bindTooltip(ring.label + ' — bei Westwind, Sturm und drehenden Tiefs nicht abschließend geprüft', { permanent: false, direction: 'top' });
+            } else {
+                L.circle(DEPONIE, {
+                    radius: ring.r,
+                    color: '#c8102e',
+                    fillColor: '#c8102e',
+                    fillOpacity: 0.04 + (rings.length - i) * 0.02,
+                    weight: 1,
+                    dashArray: '4 4'
+                }).addTo(map).bindTooltip(ring.label, { permanent: false, direction: 'top' });
+            }
         });
 
         // ------------------------------------------------------------
@@ -502,18 +526,24 @@
                 iconAnchor: [8, 8]
             });
         }
-        var HAUS_NAH    = [52.3050, 10.2017]; // Langer Damm, Handorf — 330 m SW
-        var KREISHAUS   = [52.3110, 10.2090]; // Werner-Nordmeyer-Strasse / Kreishaus 2 — 450 m NO
-        var HOLLANDSM   = [52.3098, 10.2115]; // Hollandsmuehle / Vater-Jahn-Platz — 590 m O
-        var BERKUM      = [52.3076, 10.1940]; // Berkum — 730 m W
-        var KIEBITZMOOR = [52.3115, 10.2120]; // Kiebitzmoor / Ginsterweg — 750 m NO
-        var HANDORF     = [52.3000, 10.2080]; // Handorf erste Haeuser — ab 900 m S
+        var HAUS_NAH        = [52.3050, 10.2017]; // Langer Damm, Handorf — 330 m SW
+        var KREISHAUS       = [52.3110, 10.2090]; // Werner-Nordmeyer-Strasse / Kreishaus 2 — 450 m NO
+        var HOLLANDSM       = [52.3098, 10.2115]; // Hollandsmuehle / Vater-Jahn-Platz — 590 m O
+        var BERKUM          = [52.3076, 10.1940]; // Berkum — 730 m W
+        var KIEBITZMOOR     = [52.3115, 10.2120]; // Kiebitzmoor / Ginsterweg — 750 m NO
+        var HANDORF         = [52.3000, 10.2080]; // Handorf erste Haeuser — ab 900 m S
+        var HANDORF_MITTE   = [52.2925, 10.2120]; // Handorf Zentrum — ca. 1,7 km S
+        var ROSENTHAL       = [52.3015, 10.1695]; // Rosenthal — ca. 2,5 km W
+        var SCHWICHELDT_SUED = [52.3098, 10.1515]; // Schwicheldt Süd — ca. 3,7 km W/NW
         L.marker(HAUS_NAH,    { icon: poiIcon() }).addTo(map).bindPopup('<strong>Nächstes Wohnhaus</strong><br>Langer Damm, Handorf — 330 m');
         L.marker(KREISHAUS,   { icon: poiIcon() }).addTo(map).bindPopup('<strong>Kreishaus 2</strong><br>Werner-Nordmeyer-Straße — 450 m');
         L.marker(HOLLANDSM,   { icon: poiIcon() }).addTo(map).bindPopup('<strong>Hollandsmühle</strong><br>Vater-Jahn-Platz / Tennisanlage — 590 m');
         L.marker(BERKUM,      { icon: poiIcon() }).addTo(map).bindPopup('<strong>Berkum</strong><br>730 m');
         L.marker(KIEBITZMOOR, { icon: poiIcon() }).addTo(map).bindPopup('<strong>Kiebitzmoor / Ginsterweg</strong><br>750 m');
         L.marker(HANDORF,     { icon: poiIcon() }).addTo(map).bindPopup('<strong>Handorf</strong><br>erste Häuser — ab 900 m');
+        L.marker(HANDORF_MITTE,    { icon: poiIcon() }).addTo(map).bindPopup('<strong>Handorf (Zentrum)</strong><br>ca. 1,7 km südlich – im 3-km-Sturm-Umkreis');
+        L.marker(ROSENTHAL,        { icon: poiIcon() }).addTo(map).bindPopup('<strong>Rosenthal</strong><br>ca. 2,5 km westlich – bei drehendem Sturm betroffen?');
+        L.marker(SCHWICHELDT_SUED, { icon: poiIcon() }).addTo(map).bindPopup('<strong>Schwicheldt (Süd)</strong><br>ca. 3,7 km westlich/nordwestlich – bei drehendem Sturm betroffen?');
     </script>
 </body>
 </html>
