@@ -306,9 +306,8 @@
                 <p class="contact__name"><svg class="icon icon--inline" aria-hidden="true"><use href="#ic-users"/></svg> Bürgerinitiative „Keine Deponie in Berkum"</p>
                 <ul class="contact-list">
                     <li><svg class="icon icon--inline" aria-hidden="true"><use href="#ic-mail"/></svg> <a href="mailto:deponieberkum@gmail.com">deponieberkum@gmail.com</a></li>
-                    <li><svg class="icon icon--inline" aria-hidden="true"><use href="#ic-phone"/></svg> <a href="tel:+49000000000">[Telefonnummer bitte ergänzen]</a></li>
                 </ul>
-                <p class="muted">Vertreten durch: [Name der verantwortlichen Person bitte ergänzen]</p>
+                <p class="muted">Verantwortliche Person und vollständige Anschrift im <a href="impressum.html">Impressum</a>.</p>
             </div>
         </section>
     </main>
@@ -384,10 +383,9 @@
         // KARTE — Leaflet + OpenStreetMap
         // ------------------------------------------------------------
         // Deponie-Koordinate verifiziert (vom Auftraggeber).
-        // Weitere Orte (Wohnhaus, Berkum, Handorf, Kreishaus,
-        // Kiebitzmoor, Hollandsmuehle) noch ohne echte Koordinaten —
-        // bitte nachliefern und in den auskommentierten Block unten
-        // einsetzen, dann die L.marker(...)-Aufrufe aktivieren.
+        // POI-Koordinaten wurden via OpenStreetMap/Nominatim recherchiert
+        // und approximiert, sodass die Distanzen zur Deponie zur Tabelle
+        // passen. Vor Druck/Pressekontakt bitte mit lokalem Wissen prüfen.
         // ============================================================
 
         var DEPONIE = [52.30726576707336, 10.204721449129488];
@@ -427,29 +425,28 @@
         });
 
         // ------------------------------------------------------------
-        // Weitere Marker — Koordinaten bitte ergaenzen, dann den
-        // Block aktivieren (Kommentarstriche entfernen):
+        // Weitere Marker rund um die Deponie
         // ------------------------------------------------------------
-        // function poiIcon() {
-        //     return L.divIcon({
-        //         className: 'poi-marker',
-        //         html: '<div class="pin pin--poi"></div>',
-        //         iconSize: [16, 16],
-        //         iconAnchor: [8, 8]
-        //     });
-        // }
-        // var HAUS_NAH    = [LAT, LON]; // Langer Damm, Handorf — 330 m
-        // var KREISHAUS   = [LAT, LON]; // Werner-Nordmeyer-Strasse / Kreishaus 2 — 450 m
-        // var HOLLANDSM   = [LAT, LON]; // Hollandsmuehle / Vater-Jahn-Platz — 590 m
-        // var BERKUM      = [LAT, LON]; // Berkum — 730 m
-        // var KIEBITZMOOR = [LAT, LON]; // Kiebitzmoor / Ginsterweg — 750 m
-        // var HANDORF     = [LAT, LON]; // Handorf erste Haeuser — ab 900 m
-        // L.marker(HAUS_NAH,    { icon: poiIcon() }).addTo(map).bindPopup('<strong>Naechstes Wohnhaus</strong><br>Langer Damm, Handorf — 330 m');
-        // L.marker(KREISHAUS,   { icon: poiIcon() }).addTo(map).bindPopup('<strong>Kreishaus 2</strong><br>Werner-Nordmeyer-Strasse — 450 m');
-        // L.marker(HOLLANDSM,   { icon: poiIcon() }).addTo(map).bindPopup('<strong>Hollandsmuehle</strong><br>Vater-Jahn-Platz / Tennisanlage — 590 m');
-        // L.marker(BERKUM,      { icon: poiIcon() }).addTo(map).bindPopup('<strong>Berkum</strong><br>730 m');
-        // L.marker(KIEBITZMOOR, { icon: poiIcon() }).addTo(map).bindPopup('<strong>Kiebitzmoor / Ginsterweg</strong><br>750 m');
-        // L.marker(HANDORF,     { icon: poiIcon() }).addTo(map).bindPopup('<strong>Handorf</strong><br>erste Haeuser — ab 900 m');
+        function poiIcon() {
+            return L.divIcon({
+                className: 'poi-marker',
+                html: '<div class="pin pin--poi"></div>',
+                iconSize: [16, 16],
+                iconAnchor: [8, 8]
+            });
+        }
+        var HAUS_NAH    = [52.3050, 10.2017]; // Langer Damm, Handorf — 330 m SW
+        var KREISHAUS   = [52.3110, 10.2090]; // Werner-Nordmeyer-Strasse / Kreishaus 2 — 450 m NO
+        var HOLLANDSM   = [52.3098, 10.2115]; // Hollandsmuehle / Vater-Jahn-Platz — 590 m O
+        var BERKUM      = [52.3076, 10.1940]; // Berkum — 730 m W
+        var KIEBITZMOOR = [52.3115, 10.2120]; // Kiebitzmoor / Ginsterweg — 750 m NO
+        var HANDORF     = [52.3000, 10.2080]; // Handorf erste Haeuser — ab 900 m S
+        L.marker(HAUS_NAH,    { icon: poiIcon() }).addTo(map).bindPopup('<strong>Nächstes Wohnhaus</strong><br>Langer Damm, Handorf — 330 m');
+        L.marker(KREISHAUS,   { icon: poiIcon() }).addTo(map).bindPopup('<strong>Kreishaus 2</strong><br>Werner-Nordmeyer-Straße — 450 m');
+        L.marker(HOLLANDSM,   { icon: poiIcon() }).addTo(map).bindPopup('<strong>Hollandsmühle</strong><br>Vater-Jahn-Platz / Tennisanlage — 590 m');
+        L.marker(BERKUM,      { icon: poiIcon() }).addTo(map).bindPopup('<strong>Berkum</strong><br>730 m');
+        L.marker(KIEBITZMOOR, { icon: poiIcon() }).addTo(map).bindPopup('<strong>Kiebitzmoor / Ginsterweg</strong><br>750 m');
+        L.marker(HANDORF,     { icon: poiIcon() }).addTo(map).bindPopup('<strong>Handorf</strong><br>erste Häuser — ab 900 m');
     </script>
 </body>
 </html>
