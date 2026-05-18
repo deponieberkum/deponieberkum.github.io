@@ -189,6 +189,14 @@ body {
     background: var(--color-accent-dark);
     text-decoration: none;
 }
+.btn-primary--invert {
+    background: #fff;
+    color: var(--color-accent-dark);
+}
+.btn-primary--invert:hover, .btn-primary--invert:focus {
+    background: #f4f4f2;
+    color: var(--color-accent-dark);
+}
 
 /* Sections */
 .section {
@@ -609,6 +617,9 @@ strong { font-weight: 700; }
 }
 .vortrag-questions li strong { color: #fff; }
 
+.vortrag-cta {
+    margin: 0 0 2rem;
+}
 .vortrag-source {
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.8);
@@ -616,6 +627,9 @@ strong { font-weight: 700; }
     padding-top: 1rem;
     margin: 0;
     line-height: 1.5;
+}
+.mitmachen-cta {
+    margin: 1.25rem 0 0;
 }
 
 /* Timeline */
