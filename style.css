@@ -509,6 +509,115 @@ strong { font-weight: 700; }
 }
 .risk p { margin: 0; font-size: 0.97rem; }
 
+/* Vortrag-Sektion (Block 1: Zitate, Block 2: Antwort, Block 3: Fragen) */
+.vortrag__intro {
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 720px;
+    margin: 0 0 2rem;
+    font-size: 1.05rem;
+}
+.vortrag-quotes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 0 0 2.5rem;
+}
+.vortrag-quote {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.25rem 1rem;
+    color: #fff;
+}
+.vortrag-quote__icon {
+    width: 26px;
+    height: 26px;
+    fill: currentColor;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.vortrag-quote h3 {
+    color: #fff;
+    font-size: 1.05rem;
+    margin: 0 0 0.6rem;
+    letter-spacing: -0.005em;
+}
+.vortrag-quote blockquote {
+    margin: 0 0 0.75rem;
+    font-style: italic;
+    line-height: 1.55;
+    font-size: 0.97rem;
+}
+.vortrag-quote__detail {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.88);
+    margin: 0 0 0.75rem;
+    line-height: 1.5;
+}
+.vortrag-quote__source {
+    font-size: 0.74rem;
+    color: rgba(255, 255, 255, 0.72);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Block 2: prominente Antwort der Bürgerinitiative */
+.vortrag-answer {
+    background: #fff;
+    color: var(--color-text);
+    border-radius: var(--radius);
+    padding: 1.75rem 1.5rem;
+    margin: 0 0 2.5rem;
+    box-shadow: var(--shadow-md);
+}
+.vortrag-answer h3 {
+    color: var(--color-accent-dark);
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+}
+.vortrag-answer p {
+    margin: 0 0 0.85rem;
+    line-height: 1.6;
+}
+.vortrag-answer p:last-of-type { margin-bottom: 0; }
+.vortrag-answer__demand {
+    margin-top: 1rem !important;
+    padding-top: 1rem;
+    border-top: 3px solid var(--color-accent);
+    font-size: 1.05rem;
+    color: var(--color-accent-dark);
+}
+
+/* Block 3: offene Fragen */
+.vortrag-questions__title {
+    color: #fff;
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+}
+.vortrag-questions {
+    color: #fff;
+    list-style: decimal;
+    padding-left: 1.5rem;
+    margin: 0 0 2rem;
+}
+.vortrag-questions li {
+    margin-bottom: 0.85rem;
+    line-height: 1.55;
+}
+.vortrag-questions li strong { color: #fff; }
+
+.vortrag-source {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    padding-top: 1rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
 /* Timeline */
 .timeline {
     list-style: none;
