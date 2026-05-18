@@ -393,6 +393,7 @@ strong { font-weight: 700; }
 
 /* Klasse-II Foto */
 .klasse-photo {
+    position: relative;
     margin: 1.25rem 0 1.75rem;
     padding: 0;
     background: var(--color-dark);
@@ -407,13 +408,19 @@ strong { font-weight: 700; }
     max-height: 480px;
     object-fit: cover;
     object-position: center;
+    display: block;
 }
 .klasse-photo figcaption {
-    padding: 0.7rem 1rem;
-    font-size: 0.92rem;
-    color: #d0d0d0;
-    background: var(--color-dark);
-    text-align: center;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 3px;
+    letter-spacing: 0.02em;
+    pointer-events: none;
 }
 .klasse-photo .credit {
     color: #999;
