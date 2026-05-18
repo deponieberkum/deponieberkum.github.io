@@ -493,9 +493,11 @@
             { r: 1300, label: '1,3 km' },
             { r: 3000, label: 'bei Sturm? (3 km)', stormScenario: true }
         ];
+        var outerRing = null;
         rings.forEach(function (ring, i) {
+            var circle;
             if (ring.stormScenario) {
-                L.circle(DEPONIE, {
+                circle = L.circle(DEPONIE, {
                     radius: ring.r,
                     color: '#c8102e',
                     fillColor: '#c8102e',
@@ -505,7 +507,7 @@
                     opacity: 0.7
                 }).addTo(map).bindTooltip(ring.label + ' — bei Westwind, Sturm und drehenden Tiefs nicht abschließend geprüft', { permanent: false, direction: 'top' });
             } else {
-                L.circle(DEPONIE, {
+                circle = L.circle(DEPONIE, {
                     radius: ring.r,
                     color: '#c8102e',
                     fillColor: '#c8102e',
@@ -514,7 +516,18 @@
                     dashArray: '4 4'
                 }).addTo(map).bindTooltip(ring.label, { permanent: false, direction: 'top' });
             }
+            if (!outerRing || ring.r > (outerRing.getRadius ? outerRing.getRadius() : 0)) {
+                outerRing = circle;
+            }
         });
+
+        // Zoom automatisch so setzen, dass der äußerste Ring (3-km-Sturm-Ring) komplett sichtbar ist
+        if (outerRing) {
+            map.fitBounds(outerRing.getBounds(), { padding: [20, 20] });
+            map.on('resize', function () {
+                map.fitBounds(outerRing.getBounds(), { padding: [20, 20] });
+            });
+        }
 
         // ------------------------------------------------------------
         // Weitere Marker rund um die Deponie
