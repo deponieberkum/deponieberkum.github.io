@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23 DK-II-Deponien in Norddeutschland – Keine Deponie in Berkum</title>
+    <meta name="description" content="Übersichtskarte aller 23 Deponien der Klasse II in Niedersachsen, Schleswig-Holstein und Mecklenburg-Vorpommern. Wozu noch eine weitere in Berkum?">
+    <meta name="theme-color" content="#c8102e">
+    <link rel="canonical" href="https://deponieberkum.github.io/deponien.html">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+</head>
+<body>
+    <header class="hero" style="padding: 2.5rem 0;">
+        <div class="container">
+            <p class="kicker">Bürgerinitiative · Übersicht</p>
+            <h1 style="font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.15;">23 DK-II-Deponien in Norddeutschland</h1>
+            <p class="lead" style="margin-top: 1rem;">Der Betreiber argumentiert, der Bedarf für eine weitere DK-II-Deponie sei „da". Die Realität: Das Netz ist bereits dicht – besonders rund um Peine.</p>
+            <ul class="dk2-stats">
+                <li><strong>4</strong> DK-II-Deponien <span>im 30-km-Radius um Peine</span></li>
+                <li><strong>8</strong> <span>im 75-km-Radius</span></li>
+                <li><strong>10</strong> <span>im 100-km-Radius</span></li>
+                <li><strong>23</strong> <span>insgesamt in NI, SH und MV</span></li>
+            </ul>
+            <p class="lead" style="margin-top: 1rem;">Die vier nächsten zu Peine: <strong>Watenbüttel</strong> (15 km), <strong>Diebesstieg/Salzgitter</strong> (23 km), <strong>Heinde/Bad&nbsp;Salzdetfurth</strong> (29 km) und <strong>Bornum/Wolfenbüttel</strong> (30 km). Wozu ausgerechnet 330 Meter vor unseren Häusern die 24.?</p>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <a class="back-link" href="index.html">&larr; Zurück zur Startseite</a>
+
+        <section style="margin-top: 1.5rem;">
+            <div id="map-dk2" class="map map--large" aria-label="Karte: DK-II-Deponien in Norddeutschland"></div>
+            <p class="map-legend">
+                <span class="map-legend__pin map-legend__pin--berkum" aria-hidden="true"></span> geplant: Berkum &nbsp;·&nbsp;
+                <span class="map-legend__pin map-legend__pin--poi" aria-hidden="true"></span> bestehende Anlagen, die DK-II-Material aufnehmen &nbsp;·&nbsp;
+                <span class="map-legend__ring" aria-hidden="true"></span> 100-km-Radius um Berkum
+            </p>
+            <p class="muted" style="font-size: 0.88rem; margin-top: 0.5rem;">Marker-Positionen teils approximiert anhand der Verwaltungsadresse des Betreibers (statt der eigentlichen Anlage). Stand: Mai 2026. Korrekturen gerne an <a href="mailto:deponieberkum@gmail.com">deponieberkum@gmail.com</a>.</p>
+        </section>
+
+        <section style="margin-top: 2.5rem;" class="betreiber-hintergrund">
+            <h2 style="font-size: 1.4rem; margin: 0 0 1rem;">Wer betreibt eigentlich die Deponie in Berkum?</h2>
+            <p>Hinter der Betreiberfirma <strong>HK&nbsp;Rohstoff &amp; Umwelttechnik GmbH &amp; Co. KG</strong> stehen zwei Konzerne als Gesellschafter:</p>
+            <div class="betreiber-grid">
+                <article class="betreiber-card">
+                    <h3>STRABAG SE</h3>
+                    <p><strong>Internationaler Bau- und Industriekonzern</strong> mit Hauptsitz in Wien und Köln. Über die Tochter <em>STRABAG Umwelttechnik GmbH</em> (Düsseldorf) baut und betreibt der Konzern Deponien in ganz Deutschland und Europa. Standorte u.&nbsp;a. in Düsseldorf, Darmstadt, Bremen, Potsdam, Chemnitz, Dresden.</p>
+                    <p class="muted">Quellen: <a href="https://www.strabag-umwelttechnik.com/" rel="noopener" target="_blank">strabag-umwelttechnik.com</a></p>
+                </article>
+                <article class="betreiber-card">
+                    <h3>Bettels-Gruppe (Hildesheim)</h3>
+                    <p><strong>Familienunternehmen mit Sitz in Hildesheim</strong>, geführt von Knut Bettels. Zur Gruppe gehören u.&nbsp;a. <em>Umweltdienste Kedenburg</em> (Hildesheim, mit Standort in Bockenem-Schlewecke), <em>SAV Südniedersächsische Aufbereitung und Verwertung</em>, <em>DIBA&nbsp;Entsorgung</em> (Hohenhameln, ca. 10&nbsp;km westlich von Peine) und <em>Bettels Rohstoffe</em>.</p>
+                    <p>Eigenangabe: Die Gruppe betreibt mehrere Deponien der Klassen <strong>DK 0 und DK&nbsp;I</strong> im Raum Hannover / Hildesheim / Braunschweig – <strong>aber bislang keine eigene DK&nbsp;II</strong>.</p>
+                    <p class="muted">Quellen: <a href="https://www.bettels.info/unsere-unternehmen/" rel="noopener" target="_blank">bettels.info</a>, <a href="https://www.umweltdienste-kedenburg.de/" rel="noopener" target="_blank">umweltdienste-kedenburg.de</a></p>
+                </article>
+            </div>
+            <p style="margin-top: 1.25rem;"><strong>Was bedeutet das?</strong> Berkum wäre für die Bettels-Gruppe der <strong>Einstieg in die Deponieklasse&nbsp;II</strong> – also in die zweithöchste deutsche Deponieklasse, in der Asbest, teerhaltiger Bauschutt, kontaminierte Böden und Rost-/Kesselaschen eingelagert werden dürfen. Diese Klasse erzielt deutlich höhere Marktpreise als DK 0/I. Der „Bedarf", den der Betreiber öffentlich begründet, ist <em>aus Konzern-Sicht</em> nachvollziehbar – aus regionaler Sicht angesichts <strong>4&nbsp;bestehender DK-II-Anlagen im 30-km-Radius</strong> und <strong>10 im 100-km-Radius</strong> weniger.</p>
+        </section>
+
+        <section style="margin-top: 2.5rem;">
+            <h2 style="font-size: 1.4rem; margin: 0 0 1rem;">Liste aller Standorte</h2>
+            <div class="dk2-table-wrap">
+                <table class="dk2-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Land</th>
+                            <th>Bezeichnung</th>
+                            <th>Adresse</th>
+                            <th>Betreiber</th>
+                        </tr>
+                    </thead>
+                    <tbody><!-- per JS aus DK2-Array generiert --></tbody>
+                </table>
+            </div>
+            <p class="muted" style="font-size: 0.88rem; margin-top: 0.75rem; line-height: 1.55;">
+                <strong>Hinweis zu Standort Nr.&nbsp;23 (Ihlenberg):</strong> Diese Anlage ist formal als Deponie der Klasse III genehmigt, nimmt aber regelmäßig auch DK-II-Material an. Sie zählt damit in der Praxis zum Aufnahmemarkt für DK-II-Abfälle in Norddeutschland und ist deshalb hier mit aufgeführt. – Die Liste basiert auf öffentlich zugänglichen Informationen der jeweiligen Betreiber und Landesbehörden; sie erhebt keinen Anspruch auf Vollständigkeit. Korrekturen und Ergänzungen gerne an <a href="mailto:deponieberkum@gmail.com">deponieberkum@gmail.com</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="jahr"></span> Bürgerinitiative „Keine Deponie in Berkum"</p>
+            <nav>
+                <a href="index.html">Start</a>
+                <span aria-hidden="true">·</span>
+                <a href="impressum.html">Impressum</a>
+                <span aria-hidden="true">·</span>
+                <a href="datenschutz.html">Datenschutz</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script>
+        var BERKUM = [52.30726576707336, 10.204721449129488];
+
+        var DK2 = [
+            { nr: 1, land:"NI", name:"Bornum",              adresse:"In den Schönen Morgen 1, 38300 Wolfenbüttel",   betreiber:"ALW Wolfenbüttel",         url:"https://www.alw-wf.de/",                              lat:52.15066, lon:10.56286 },
+            { nr: 2, land:"NI", name:"Watenbüttel",         adresse:"Celler Heerstraße 335, 38112 Braunschweig",     betreiber:"Stadt Braunschweig / ALBA", url:"https://alba-bs.de/",                                 lat:52.31512, lon:10.44862 },
+            { nr: 3, land:"NI", name:"Diebesstieg",         adresse:"Diebesstieg 50, 38229 Salzgitter-Heerte",       betreiber:"EZS",                       url:"https://entsorgungszentrum.de/",                      lat:52.13328, lon:10.37382 },
+            { nr: 4, land:"NI", name:"Blankenhagen",        adresse:"Matthias-Grünewald-Straße 22, 37154 Northeim",  betreiber:"KAW Northeim",              url:"https://www.landkreis-northeim.de/abfall-und-deponien/", lat:51.69369, lon:9.99158 },
+            { nr: 5, land:"NI", name:"Heinde",              adresse:"Bahnhofsallee 36, 31162 Bad Salzdetfurth",      betreiber:"ZAH Hildesheim",            url:"https://www.zah-hildesheim.de/",                      lat:52.09752, lon:10.01545 },
+            { nr: 6, land:"NI", name:"Bassum",              adresse:"Klövenhausen 20, 27209 Bassum",                 betreiber:"AWG Diepholz",              url:"https://www.awg-bassum.de/",                          lat:52.81544, lon:8.70808 },
+            { nr: 7, land:"NI", name:"Kolenfeld",           adresse:"Wunstorf-Kolenfeld, 31515 Wunstorf",            betreiber:"aha Hannover",              url:"https://www.aha-region.de/",                          lat:52.38791, lon:9.47550 },
+            { nr: 8, land:"NI", name:"Sachsenhagen",        adresse:"Am Schacht 1, 31655 Stadthagen",                betreiber:"AWS Schaumburg",            url:"https://aws-shg.de/",                                 lat:52.39664, lon:9.26630 },
+            { nr: 9, land:"NI", name:"Borg",                adresse:"Rosche-Borg, 29525 Uelzen",                     betreiber:"AWB Uelzen",                url:"https://awb.uelzen.de/",                              lat:53.01450, lon:10.73278 },
+            { nr:10, land:"NI", name:"Wischhafen II",       adresse:"Am Sande 2, 21682 Stade",                       betreiber:"LK Stade",                  url:"https://abfall.landkreis-stade.de/",                  lat:53.59873, lon:9.47772 },
+            { nr:11, land:"NI", name:"Bardowick",           adresse:"Adendorfer Weg, 21357 Bardowick",               betreiber:"GFA Lüneburg",              url:"https://gfa-lueneburg.de/",                           lat:53.29986, lon:10.41460 },
+            { nr:12, land:"NI", name:"Hillern",             adresse:"Hillern 21, 29614 Soltau",                      betreiber:"AHK Heidekreis",            url:"https://www.ahk-heidekreis.de/",                      lat:53.04835, lon:9.86140 },
+            { nr:13, land:"NI", name:"Mansie II",           adresse:"Ammerlandallee 12, 26655 Westerstede",          betreiber:"AWB Ammerland",             url:"https://www.ammerland.de/abfallwirtschaft",           lat:53.25548, lon:7.93499 },
+            { nr:14, land:"NI", name:"Sedelsberg",          adresse:"Im Walde, 26683 Saterland-Sedelsberg",          betreiber:"LK Cloppenburg",            url:"https://www.lkclp.de/",                               lat:53.02988, lon:7.76145 },
+            { nr:15, land:"NI", name:"Dörpen",              adresse:"Ordeniederung 1, 49716 Meppen",                 betreiber:"AWB Emsland",               url:"https://www.awb-emsland.de/",                         lat:52.69512, lon:7.30603 },
+            { nr:16, land:"NI", name:"Wilsum II",           adresse:"Van-Delden-Straße 1-7, 48529 Nordhorn",         betreiber:"AWB Grafschaft Bentheim",   url:"https://awb.grafschaft-bentheim.de/",                 lat:52.43316, lon:7.06149 },
+            { nr:17, land:"NI", name:"Brake-Käseburg Nord", adresse:"Otto-Hahn-Straße 9, 26919 Brake",               betreiber:"GIB Wesermarsch",           url:"https://gib-entsorgung.de/",                          lat:53.33631, lon:8.46546 },
+            { nr:18, land:"NI", name:"Wiefels II",          adresse:"Fuhlrieger Allee 3, 26434 Wangerland",          betreiber:"ZV AWZ Friesland/Wittmund", url:"https://www.awz-wiefels.de/",                         lat:53.58944, lon:7.86595 },
+            { nr:19, land:"NI", name:"Hattorf",             adresse:"Herzberger Straße 5, 37520 Osterode",           betreiber:"KAB Göttingen",             url:"https://www.landkreisgoettingen.de/themen-leistungen/abfall-entsorgung", lat:51.72462, lon:10.25686 },
+            { nr:20, land:"SH", name:"Niemark",             adresse:"Raabrede, 23560 Lübeck",                        betreiber:"Entsorgungsbetriebe Lübeck",url:"https://www.entsorgung.luebeck.de/",                  lat:53.81805, lon:10.64705 },
+            { nr:21, land:"SH", name:"Böxlund",             adresse:"Hauptstraße 2, 24994 Böxlund",                  betreiber:"Stadtwerke Flensburg",      url:"https://www.stadtwerke-flensburg.de/",                lat:54.84837, lon:9.17889 },
+            { nr:22, land:"MV", name:"Rosenow",             adresse:"Am Flughafen 1, 17091 Rosenow",                 betreiber:"OVVD GmbH",                 url:"https://www.ovvd.de/",                                lat:53.62820, lon:13.03372 },
+            { nr:23, land:"MV", name:"Ihlenberg",           adresse:"Ihlenberg 1, 23923 Selmsdorf",                  betreiber:"IAG",                       url:"https://www.ihlenberg.de/",                           lat:53.87157, lon:10.87727, dk3:true },
+        ];
+
+        // ============================================================
+        // Karte initialisieren
+        // ============================================================
+        var map = L.map('map-dk2', { scrollWheelZoom: false }).setView([53.0, 9.8], 7);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende'
+        }).addTo(map);
+
+        var touchDevice = matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+        // Berkum als roter Hauptmarker
+        var berkumIcon = L.divIcon({
+            className: 'deponie-marker',
+            html: '<div class="pin pin--deponie"><span>!</span></div>',
+            iconSize: [32, 32],
+            iconAnchor: [16, 32]
+        });
+        L.marker(BERKUM, { icon: berkumIcon }).addTo(map).bindPopup(
+            '<strong>Geplante DK II Berkum</strong><br>nur 330&nbsp;m zum nächsten Wohnhaus<br><a href="index.html">→ Zur Bürgerinitiative</a>'
+        );
+
+        // 100-km-Radius um Berkum als visuelle Vergleichsfläche
+        L.circle(BERKUM, {
+            radius: 100000,           // 100 km in Metern
+            color: '#c8102e',
+            fillColor: '#c8102e',
+            fillOpacity: 0.04,
+            weight: 1.5,
+            dashArray: '8 6',
+            opacity: 0.75
+        }).addTo(map).bindTooltip('100-km-Umkreis um Berkum', { direction: 'top' });
+
+        // Bestehende Deponien (alle einheitlich schwarz – DK-III-Hinweis nur im Fließtext unten)
+        var poiSize = touchDevice ? 32 : 20;
+        function poiIcon() {
+            return L.divIcon({
+                className: 'poi-marker',
+                html: '<div class="pin pin--poi"></div>',
+                iconSize: [poiSize, poiSize],
+                iconAnchor: [poiSize / 2, poiSize / 2]
+            });
+        }
+
+        function escapeHtml(s) {
+            return s.replace(/[&<>"']/g, function (c) {
+                return ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[c];
+            });
+        }
+
+        var tbody = document.querySelector('.dk2-table tbody');
+        DK2.forEach(function (d) {
+            // Marker
+            var betreiber = d.url
+                ? '<a href="' + d.url + '" rel="noopener" target="_blank">' + escapeHtml(d.betreiber) + '</a>'
+                : escapeHtml(d.betreiber);
+            var popupHtml =
+                '<strong>' + escapeHtml(d.name) + '</strong>' +
+                '<br><span class="muted">' + escapeHtml(d.adresse) + '</span>' +
+                '<br>Betreiber: ' + betreiber;
+            L.marker([d.lat, d.lon], { icon: poiIcon() }).addTo(map).bindPopup(popupHtml);
+
+            // Tabellenzeile
+            var tr = document.createElement('tr');
+            tr.innerHTML =
+                '<td>' + d.nr + '</td>' +
+                '<td>' + d.land + '</td>' +
+                '<td>' + escapeHtml(d.name) + '</td>' +
+                '<td>' + escapeHtml(d.adresse) + '</td>' +
+                '<td>' + betreiber + '</td>';
+            tbody.appendChild(tr);
+        });
+
+        // Karte automatisch auf alle Marker zoomen
+        var allCoords = [BERKUM].concat(DK2.map(function (d) { return [d.lat, d.lon]; }));
+        map.fitBounds(L.latLngBounds(allCoords), { padding: [40, 40] });
+
+        document.getElementById('jahr').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
