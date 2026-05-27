@@ -1344,6 +1344,18 @@ footer nav a:hover { color: #fff; text-decoration: underline; }
     font-weight: 400;
     margin-left: 0.25rem;
 }
+.podcast-card__notice {
+    margin: 0.75rem 0 0;
+    padding-top: 0.7rem;
+    border-top: 1px dashed var(--color-border);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--color-muted);
+}
+.podcast-card__notice strong {
+    color: var(--color-text);
+    font-weight: 600;
+}
 
 /* Share buttons */
 .share-row {
