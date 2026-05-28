@@ -517,6 +517,20 @@ strong { font-weight: 700; }
 .klasse-photo .credit {
     color: #999;
 }
+.klasse-real {
+    margin: 1rem 0 0;
+    padding: 0.85rem 1.1rem;
+    background: var(--color-gray);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+.klasse-real a {
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 0.3rem;
+}
 
 /* Materials (Klasse II) */
 .materials {
