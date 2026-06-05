@@ -256,6 +256,24 @@ body {
     line-height: 1.05;
     font-weight: 800;
     letter-spacing: -0.02em;
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+.hero__question {
+    margin: 0 0 1.25rem;
+    max-width: 640px;
+    font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.hero__followup {
+    margin-top: -1rem;
+}
+.hero__followup strong {
+    color: #fff;
 }
 
 .hero .lead {
@@ -1487,6 +1505,17 @@ footer nav a:hover { color: #fff; text-decoration: underline; }
 .share-row--accent .share-btn {
     /* Inside .section--accent which is already dark — keep contrast */
     border-color: rgba(255, 255, 255, 0.35);
+}
+.share-btn--whatsapp,
+.share-row--accent .share-btn--whatsapp {
+    background: #25d366;
+    border-color: #25d366;
+    color: #fff;
+}
+.share-btn--whatsapp:hover, .share-btn--whatsapp:focus {
+    background: #1da851;
+    border-color: #1da851;
+    color: #fff;
 }
 @media (max-width: 540px) {
     .share-row { gap: 0.4rem; }
