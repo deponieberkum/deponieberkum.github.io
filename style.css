@@ -260,6 +260,14 @@ body {
     overflow-wrap: break-word;
 }
 
+.hero__tagline {
+    margin: -0.4rem 0 1.25rem;
+    font-size: clamp(1.35rem, 4vw, 2rem);
+    font-weight: 800;
+    color: var(--color-accent);
+    letter-spacing: -0.01em;
+}
+
 .hero__question {
     margin: 0 0 1.25rem;
     max-width: 640px;
