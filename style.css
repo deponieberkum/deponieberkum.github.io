@@ -1537,3 +1537,70 @@ footer nav a:hover { color: #fff; text-decoration: underline; }
         padding: 0.4rem 0.7rem;
     }
 }
+
+/* Downloads (Flyer + Unterschriftenliste) in der Mitmachen-Sektion */
+.downloads {
+    margin: 1.75rem 0 0;
+}
+.downloads__title {
+    margin: 0 0 0.85rem;
+    font-size: 1.15rem;
+    color: #fff;
+}
+.downloads__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+@media (min-width: 620px) {
+    .downloads__grid { grid-template-columns: 1fr 1fr; }
+}
+.download-card {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.95rem 1.1rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: var(--radius);
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+.download-card:hover, .download-card:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+.download-card__icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    color: var(--color-accent);
+}
+.download-card:hover .download-card__icon,
+.download-card:focus .download-card__icon {
+    color: #fff;
+}
+.download-card__body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+    min-width: 0;
+}
+.download-card__body strong {
+    font-size: 1.02rem;
+}
+.download-card__sub {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+.downloads__note {
+    margin: 0.85rem 0 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+}
+.downloads__note strong { color: #fff; }
