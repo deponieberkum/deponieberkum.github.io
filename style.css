@@ -239,7 +239,12 @@ body {
     color: #fff;
 }
 @media (max-width: 540px) {
-    .topnav__brand { display: none; }
+    .topnav__brand {
+        flex: 1 1 100%;
+        text-align: center;
+        font-size: 0.88rem;
+        order: -1;
+    }
     .topnav__inner {
         flex-wrap: wrap;
         justify-content: center;
