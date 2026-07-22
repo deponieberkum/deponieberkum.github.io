@@ -240,14 +240,25 @@ body {
 }
 @media (max-width: 540px) {
     .topnav__brand { display: none; }
+    .topnav__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 0.35rem;
+        padding-bottom: 0.35rem;
+        row-gap: 0;
+        gap: 0.35rem;
+        min-height: 0;
+    }
     .topnav__cta {
         font-size: 0.82rem;
-        padding: 0.4rem 0.75rem;
+        padding: 0.35rem 0.7rem;
     }
+    .topnav__links { display: contents; }
     .topnav__links a {
-        font-size: 0.85rem;
-        padding: 0.45rem 0.55rem;
+        font-size: 0.84rem;
+        padding: 0.35rem 0.45rem;
     }
+    html { scroll-padding-top: 96px; }
 }
 
 .hero h1 {
