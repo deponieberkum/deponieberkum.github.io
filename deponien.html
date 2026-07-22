@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>23 DK-II-Deponien in Norddeutschland – Keine Deponie in Berkum</title>
-    <meta name="description" content="Übersichtskarte aller 23 Deponien der Klasse II in Niedersachsen, Schleswig-Holstein und Mecklenburg-Vorpommern. Wozu noch eine weitere in Berkum?">
+    <title>DK-II-Deponien: Karte und erlaubte Abfälle – Keine Deponie in Berkum</title>
+    <meta name="description" content="Übersichtskarte aller 24 Deponien der Klasse II in Norddeutschland – und was in eine DK-II-Deponie eingelagert werden darf, von Asbest bis Schlacke. Wozu noch eine weitere in Berkum?">
     <meta name="theme-color" content="#c8102e">
     <link rel="canonical" href="https://keine-deponie-berkum.de/deponien.html">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -14,6 +14,16 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 </head>
 <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 10 18H2z"/><line x1="12" y1="9" x2="12" y2="14"/><line x1="12" y1="17" x2="12" y2="17.5"/></symbol>
+            <symbol id="ic-brick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16"/><line x1="9" y1="4" x2="9" y2="10"/><line x1="15" y1="4" x2="15" y2="10"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="6" y1="10" x2="6" y2="16"/><line x1="12" y1="10" x2="12" y2="16"/><line x1="18" y1="10" x2="18" y2="16"/><line x1="3" y1="16" x2="21" y2="16"/></symbol>
+            <symbol id="ic-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-3 7-10c0-5-4-7-7-9 1 4-1 6-3 7s-4 4-4 7c0 3 3 5 7 5z"/><path d="M11 17c1 0 2-1 2-2s-1-2-1-3c0 0-2 1-2 3 0 1 0 2 1 2z"/></symbol>
+            <symbol id="ic-volume" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7 12 3l9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></symbol>
+            <symbol id="ic-soil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18s2-2 4-2 3 2 5 2 3-2 5-2 3 2 5 2"/><path d="M3 13s2-2 4-2 3 2 5 2 3-2 5-2 3 2 5 2"/><path d="M3 8s2-2 4-2 3 2 5 2 3-2 5-2 3 2 5 2"/></symbol>
+            <symbol id="ic-factory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20V8l5 4V8l5 4V8l5 4V6h3v14z"/><path d="M9 16h2 M14 16h2"/></symbol>
+        </defs>
+    </svg>
     <header class="hero" style="padding: 2.5rem 0;">
         <div class="container">
             <p class="kicker">Bürgerinitiative · Übersicht</p>
@@ -53,6 +63,55 @@
                 <span class="map-legend__ring" aria-hidden="true"></span> 100-km-Radius um Berkum
             </p>
             <p class="muted" style="font-size: 0.88rem; margin-top: 0.5rem;">Marker-Positionen teils approximiert anhand der Verwaltungsadresse des Betreibers (statt der eigentlichen Anlage). Stand: Mai 2026. Korrekturen gerne an <a href="mailto:deponieberkum@gmail.com">deponieberkum@gmail.com</a>.</p>
+        </section>
+
+        <section id="klasse-zwei" style="margin-top: 2.5rem;">
+            <h2 style="font-size: 1.4rem; margin: 0 0 1rem;">Was darf in eine Klasse-II-Deponie?</h2>
+            <p>Deponieklasse II nimmt belastete, aber nicht hoch gefährliche Stoffe auf. Laut Betreiber (PAZ 17.05.2026, Frage 3) sollen <strong>rund 80&nbsp;%</strong> der eingelagerten Menge Boden, Steine, Beton, Fliesen, Ziegel und Keramik mit gefährlichen Stoffen sein. Hinzu kommen ausdrücklich auch Asbestplatten, ölhaltige Bohrschlämme, Abfälle aus Erdölraffinerie und Erdgasgewinnung, Rost- und Kesselaschen sowie Schlacken – Materialien, die niemand in seiner Nähe haben möchte:</p>
+            <figure class="klasse-photo">
+                <picture>
+                    <source srcset="bilder/Bauschuttdeponie.webp" type="image/webp">
+                    <img src="bilder/Bauschuttdeponie.jpg" alt="Aufschüttung einer Bauschuttdeponie: ein gelber Kipper-LKW kippt Bauschutt ab, eine Staubwolke steigt auf, ein Radlader schiebt Material zurecht, ein Arbeiter in Warnkleidung steht am Rand. Eingeblendet ist ein Warnschild: „Gefahrstoffbereich – Kontakt mit belastetem Bauschutt vermeiden. Gesundheitsschädlich beim Einatmen von Fasern."" loading="lazy">
+                </picture>
+                <figcaption>KI-generiertes Symbolbild</figcaption>
+            </figure>
+            <p class="klasse-real">
+                <strong>Wie eine reale Großdeponie in der Landschaft aussieht</strong> – und was aus einem anfangs als Bauschutt-Standort dargestellten Gelände werden kann – zeigt der Fall <strong>Ihlenberg</strong> bei Schönberg: 1979 offiziell als Deponie für Bauschutt, Schlacke und Asche begonnen, heute mit rund 13&nbsp;Mio.&nbsp;m³ einer der größten Sondermüllberge Europas.
+                <a href="https://www.ndr.de/geschichte/schauplaetze/Als-der-Ihlenberg-1979-zu-einer-Muelldeponie-wurde,ihlenberg143.html" rel="noopener" target="_blank">→ NDR-Bericht mit Bildern: „Als der Ihlenberg 1979 zur Mülldeponie wurde"</a>
+            </p>
+            <div class="materials">
+                <article class="material material--alert">
+                    <svg class="material__icon" aria-hidden="true"><use href="#ic-alert"/></svg>
+                    <h3>Asbestplatten</h3>
+                    <p>Asbestzement aus alten Dächern und Fassaden. Faserstaub gilt als krebserregend (Lungenkrebs, Mesotheliom). Geschäftsführer Brozio hat in der Info-Veranstaltung am 13.05.2026 mehrfach mündlich bestätigt: „Staubende gefährliche Stoffe wie Asbest würden in speziellen Planen verpackt auf Lkw angeliefert und so verpackt auch eingelagert." (PAZ 17.05.2026, Frage 10) <strong>Wir fragen:</strong> Wie soll das bei 20 LKW pro Tag über 20 Jahre tatsächlich sicher funktionieren – bei Westwind in Richtung Peine?</p>
+                </article>
+                <article class="material">
+                    <svg class="material__icon" aria-hidden="true"><use href="#ic-brick"/></svg>
+                    <h3>Bauschutt</h3>
+                    <p>Mauerwerk, Beton, Mörtel – verunreinigt mit Schadstoffen aus alten Gebäuden, oft mit Rückständen alter Anstriche und Dämmstoffe.</p>
+                </article>
+                <article class="material">
+                    <svg class="material__icon" aria-hidden="true"><use href="#ic-flame"/></svg>
+                    <h3>Teerhaltige Aufbrüche</h3>
+                    <p>Alter Straßenbelag mit Teer (PAK, polyzyklische aromatische Kohlenwasserstoffe). Auswaschungen können ins Grundwasser gelangen.</p>
+                </article>
+                <article class="material">
+                    <svg class="material__icon" aria-hidden="true"><use href="#ic-volume"/></svg>
+                    <h3>Gipshaltige Abfälle</h3>
+                    <p>Gipsplatten, Putzreste, Sanitärabbruch. Sulfate können bei Niederschlag in den Untergrund gelangen.</p>
+                </article>
+                <article class="material">
+                    <svg class="material__icon" aria-hidden="true"><use href="#ic-soil"/></svg>
+                    <h3>Belastete Böden</h3>
+                    <p>Aushub von kontaminierten Standorten – etwa von Tankstellen, alten Industrieflächen oder Straßenrändern.</p>
+                </article>
+                <article class="material">
+                    <svg class="material__icon" aria-hidden="true"><use href="#ic-factory"/></svg>
+                    <h3>Schlacken und Aschen</h3>
+                    <p>Reststoffe aus Müllverbrennungs­anlagen und der Industrie – häufig mit Schwermetallen belastet.</p>
+                </article>
+            </div>
+            <p class="note">In Deutschland gibt es fünf Deponieklassen (0 bis IV). Klasse II ist die zweithöchste Stufe für nicht-gefährliche Abfälle – die Stoffe sind belastet genug, dass sie eine Basisabdichtung gegen das Grundwasser brauchen.</p>
         </section>
 
         <section style="margin-top: 2.5rem;" class="betreiber-hintergrund">
