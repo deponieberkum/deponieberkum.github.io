@@ -293,6 +293,8 @@ body {
     max-width: 640px;
 }
 .hero__region strong { opacity: 1; }
+.hero__region a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+.hero__region a:hover, .hero__region a:focus { color: var(--color-accent); }
 
 .hero__question {
     margin: 0 0 1.25rem;
