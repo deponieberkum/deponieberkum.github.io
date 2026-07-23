@@ -37,6 +37,8 @@ Gehostet via GitHub Pages unter der in `CNAME` hinterlegten Domain (keine-deponi
   dort spiegeln. Fremde Zeitungsartikel nur verlinken/zitieren, keine Artikel-PDFs hosten.
 - `geschichte.html` – Zeitleiste der Deponie-Geschichte plus Grundwasser-Abschnitt.
 - `vortrag.html` – Dokumentation der Info-Veranstaltung im Forum Peine am 13.05.2026.
+- `ortstermin.html` – Protokoll des Ortstermins an der Deponie am 22.07.2026 (Standpunkte + Link zum
+  Zeitungsbericht).
 - `impressum.html`, `datenschutz.html` – Impressum und Datenschutzerklärung.
 - `style.css` – gesamtes Styling der Seite (ein Stylesheet, kein Präprozessor).
 - `bilder/` – Bild-Assets (JPEG- und WebP-Varianten).
