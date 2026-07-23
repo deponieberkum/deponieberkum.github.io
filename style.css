@@ -284,6 +284,16 @@ body {
     letter-spacing: -0.01em;
 }
 
+.hero__region {
+    margin: -0.4rem 0 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #fff;
+    opacity: 0.9;
+    max-width: 640px;
+}
+.hero__region strong { opacity: 1; }
+
 .hero__question {
     margin: 0 0 1.25rem;
     max-width: 640px;
