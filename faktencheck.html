@@ -14,6 +14,20 @@
 </head>
 
 <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="ic-mountain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 5-10 4 7 2-4 7 7z"/><circle cx="17" cy="6" r="2"/></symbol>
+            <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 14"/></symbol>
+            <symbol id="ic-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="11" height="9"/><path d="M13 11h4l3 4v2h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+            <symbol id="ic-droplets" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 14a4 4 0 0 0 8 0c0-2.5-4-7-4-7s-4 4.5-4 7Z"/><path d="M16 6c1 1.5 3 4 3 6a3 3 0 0 1-3 3"/></symbol>
+            <symbol id="ic-wind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h12a3 3 0 1 0-3-3"/><path d="M3 14h17a3 3 0 1 1-3 3"/><path d="M3 11h11"/></symbol>
+            <symbol id="ic-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+            <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 10 18H2z"/><line x1="12" y1="9" x2="12" y2="14"/><line x1="12" y1="17" x2="12" y2="17.5"/></symbol>
+            <symbol id="ic-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
+            <symbol id="ic-factory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20V8l5 4V8l5 4V8l5 4V6h3v14z"/><path d="M9 16h2 M14 16h2"/></symbol>
+            <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></symbol>
+        </defs>
+    </svg>
     <header class="hero" style="padding: 2.5rem 0;">
         <div class="container">
             <p class="kicker">Bürgerinitiative · Faktencheck</p>
@@ -40,86 +54,192 @@
 
         <section style="margin-top: 1rem;">
             <p>Kurz vor unserem Vorort-Termin mit den örtlichen Pressevertretern im Juli 2026 ging die Webseite des Betreibers online – und an der Deponie hängt seither ein großes Banner: <em>„Ein Altstandort wird auf den neuesten Stand gebracht – offen, transparent, sicher.“</em> Wir nehmen den Betreiber beim Wort und haben seine Webseite Aussage für Aussage geprüft. Quellen: deponie-berkum.de (Stand Juli 2026), Informationsveranstaltung im Forum Peine am 13.05.2026, Berichterstattung der Peiner Allgemeinen Zeitung (Mai 2026).</p>
+
+            <div class="fc-index">
+                <p class="fc-index__title">Auf einen Blick: 13 Aussagen im Check</p>
+                <div class="fc-chips">
+                    <a class="fc-chip fc-chip--verschwiegen" href="#fc-1">Banner</a>
+                    <a class="fc-chip fc-chip--bestaetigt" href="#fc-2">Abdichtung sowieso</a>
+                    <a class="fc-chip fc-chip--offen" href="#fc-3">Wer saniert?</a>
+                    <a class="fc-chip fc-chip--verschwiegen" href="#fc-4">Verkauf nur bei Genehmigung</a>
+                    <a class="fc-chip fc-chip--verschwiegen" href="#fc-5">700.000 m³ Umlagern</a>
+                    <a class="fc-chip fc-chip--unvollstaendig" href="#fc-6">Asbest fehlt</a>
+                    <a class="fc-chip fc-chip--offen" href="#fc-7">Nur der Endzustand</a>
+                    <a class="fc-chip fc-chip--widerspruch" href="#fc-8">Grundwasser</a>
+                    <a class="fc-chip fc-chip--unvollstaendig" href="#fc-9">LKW-Verkehr</a>
+                    <a class="fc-chip fc-chip--offen" href="#fc-10">Asbest-Verpackung</a>
+                    <a class="fc-chip fc-chip--offen" href="#fc-11">Bundeszahl</a>
+                    <a class="fc-chip fc-chip--widerspruch" href="#fc-12">Immobilienwerte</a>
+                    <a class="fc-chip fc-chip--unvollstaendig" href="#fc-13">Betriebsdauer</a>
+                </div>
+            </div>
         </section>
 
         <section style="margin-top: 2rem;">
 
-            <article class="fc-block">
-                <p class="fc-block__source">1 · Banner an der Deponie</p>
-                <blockquote><p><span class="fc-quote-label">Der Betreiber schreibt:</span> „Deponie Berkum. Ein Altstandort wird auf den neuesten Stand gebracht – offen, transparent, sicher.“ Weiter unten: „Schadstoffaustrag in den Untergrund und das Grundwasser“ – und zugleich: für Anwohner bestehe „keine Gefahr“.</p></blockquote>
-                <p class="fc-frage"><strong class="fc-frage-label">Unsere Frage:</strong> Auf dem ganzen Banner fehlt das Entscheidende: <strong>kein Wort vom geplanten 35-Meter-Berg, kein Wort von 900.000 m³ neuem Abfall, kein Wort von Asbest.</strong> Es liest sich wie eine reine Sanierung. Und der behauptete „Schadstoffaustrag ins Grundwasser“ ist genau das Szenario, mit dem das Aufbaggern gerechtfertigt werden soll – unsere eigene Grundwasser-Untersuchung in Berkum ergab dagegen unbedenkliche Werte. Was schützt wirklich? Die Abdichtung von oben, damit kein Regenwasser mehr einsickert. Dafür braucht es keinen Asbestberg.</p>
+            <article class="fc-card" id="fc-1">
+                <div class="fc-card__head">
+                    <span class="fc-card__icon"><svg aria-hidden="true"><use href="#ic-alert"/></svg></span>
+                    <span class="fc-card__source">1 · Banner an der Deponie</span>
+                    <span class="fc-verdict fc-verdict--verschwiegen">Verschwiegen</span>
+                </div>
+                <div class="fc-quote"><span class="fc-quote__label">Der Betreiber schreibt</span><p>„Deponie Berkum. Ein Altstandort wird auf den neuesten Stand gebracht – offen, transparent, sicher.“ Weiter unten: „Schadstoffaustrag in den Untergrund und das Grundwasser“ – und zugleich: für Anwohner bestehe „keine Gefahr“.</p></div>
+                <div class="fc-answer">
+                    <div class="fc-figure"><div class="fc-figure__num">35 m</div><div class="fc-figure__label">kein Wort davon</div></div>
+                    <p class="fc-answer__text"><span class="fc-answer-label">Unsere Frage:</span> Auf dem ganzen Banner fehlt das Entscheidende: <strong>kein Wort vom geplanten 35-Meter-Berg, kein Wort von 900.000 m³ neuem Abfall, kein Wort von Asbest.</strong> Es liest sich wie eine reine Sanierung. Und der behauptete „Schadstoffaustrag ins Grundwasser“ ist genau das Szenario, mit dem das Aufbaggern gerechtfertigt werden soll – unsere eigene Grundwasser-Untersuchung in Berkum ergab dagegen unbedenkliche Werte. Was schützt wirklich? Die Abdichtung von oben, damit kein Regenwasser mehr einsickert. Dafür braucht es keinen Asbestberg.</p>
+                </div>
             </article>
 
-            <article class="fc-block">
-                <p class="fc-block__source">2 · FAQ, Frage 22</p>
-                <blockquote><p><span class="fc-quote-label">Der Betreiber schreibt:</span> „Wenn die Behörde das Vorhaben nicht genehmigt, wird es nicht realisiert. Dann werden die Stilllegungsmaßnahmen zur Oberflächenabdichtung auf der Grundlage vorhandener, ggf. seitens der Behörde noch anzupassender Genehmigungen fortgeführt.“</p></blockquote>
-                <p class="fc-frage"><strong class="fc-frage-label">Unsere Frage:</strong> Warum dann überhaupt eine neue Deponie? Die sichere Abdeckung kommt also <strong>so oder so</strong> – ganz ohne 35-Meter-Berg, ohne Asbest, ohne LKW-Verkehr. Warum nicht einfach: sichern statt erweitern?</p>
+            <article class="fc-card" id="fc-2">
+                <div class="fc-card__head">
+                    <span class="fc-card__icon"><svg aria-hidden="true"><use href="#ic-check"/></svg></span>
+                    <span class="fc-card__source">2 · FAQ, Frage 22</span>
+                    <span class="fc-verdict fc-verdict--bestaetigt">Bestätigt uns</span>
+                </div>
+                <div class="fc-quote"><span class="fc-quote__label">Der Betreiber schreibt</span><p>„Wenn die Behörde das Vorhaben nicht genehmigt, wird es nicht realisiert. Dann werden die Stilllegungsmaßnahmen zur Oberflächenabdichtung auf der Grundlage vorhandener, ggf. seitens der Behörde noch anzupassender Genehmigungen fortgeführt.“</p></div>
+                <div class="fc-answer">
+                    <p class="fc-answer__text"><span class="fc-answer-label">Unsere Frage:</span> Warum dann überhaupt eine neue Deponie? Die sichere Abdeckung kommt also <strong>so oder so</strong> – ganz ohne 35-Meter-Berg, ohne Asbest, ohne LKW-Verkehr. Warum nicht einfach: sichern statt erweitern?</p>
+                </div>
             </article>
 
-            <article class="fc-block">
-                <p class="fc-block__source">3 · FAQ, Frage 2</p>
-                <blockquote><p><span class="fc-quote-label">Der Betreiber schreibt:</span> „Auf der Deponie Berkum lagern Schlämme und Reststoffe aus der Eisen- und Stahlproduktion der Ilseder Hütte und der Peiner Träger GmbH.“</p></blockquote>
-                <p class="fc-frage"><strong class="fc-frage-label">Unsere Frage:</strong> Die <strong>Peiner Träger GmbH</strong> – eine Tochter im Salzgitter-Konzern – hat die Abfälle dort abgelagert. Warum saniert nicht sie? Mit der Abdichtung war 2010 sogar schon begonnen worden – 2014 wurde sie gestoppt. Warum?</p>
+            <article class="fc-card" id="fc-3">
+                <div class="fc-card__head">
+                    <span class="fc-card__icon"><svg aria-hidden="true"><use href="#ic-factory"/></svg></span>
+                    <span class="fc-card__source">3 · FAQ, Frage 2</span>
+                    <span class="fc-verdict fc-verdict--offen">Offene Frage</span>
+                </div>
+                <div class="fc-quote"><span class="fc-quote__label">Der Betreiber schreibt</span><p>„Auf der Deponie Berkum lagern Schlämme und Reststoffe aus der Eisen- und Stahlproduktion der Ilseder Hütte und der Peiner Träger GmbH.“</p></div>
+                <div class="fc-answer">
+                    <p class="fc-answer__text"><span class="fc-answer-label">Unsere Frage:</span> Die <strong>Peiner Träger GmbH</strong> – eine Tochter im Salzgitter-Konzern – hat die Abfälle dort abgelagert. Warum saniert nicht sie? Mit der Abdichtung war 2010 sogar schon begonnen worden – 2014 wurde sie gestoppt. Warum?</p>
+                </div>
             </article>
 
-            <article class="fc-block">
-                <p class="fc-block__source">4 · Seite „Die HK-RUG“</p>
-                <blockquote><p><span class="fc-quote-label">Der Betreiber schreibt:</span> „Die Gesellschaft wurde 2012 unter dem Namen ‚Deponie Berkum GmbH &amp; Co. KG‘ mit dem Ziel gegründet, die Deponiekapazitäten des Geländes der Deponie Berkum zu nutzen und somit flächenschonend Deponiebedarf zu decken.“</p></blockquote>
-                <p class="fc-frage"><strong class="fc-frage-label">Unsere Frage:</strong> Was die Webseite verschweigt: Der Verkauf des Geländes an die HK-RUG gilt <strong>nur, wenn die neue Deponie genehmigt wird</strong> – das bestätigte der Rechtsvertreter der Peiner Träger beim Forum am 13. Mai 2026. Im Klartext: Wird nicht genehmigt, bleibt die Peiner Träger GmbH in der Verantwortung und muss die begonnene Abdichtung zu Ende bringen. Die „Reaktivierung“ ist damit vor allem eins: der Ausweg der Peiner Träger aus der eigenen Sanierungspflicht. Beim Ortstermin am 22. Juli 2026 wurde es öffentlich bestätigt: Das Gelände gehört bis zur Genehmigung der <strong>Salzgitter AG</strong> und geht erst danach an den Betreiber über (Braunschweiger Zeitung, 22.07.2026). Warum steht davon kein Wort auf der Webseite?</p>
+            <article class="fc-card" id="fc-4">
+                <div class="fc-card__head">
+                    <span class="fc-card__icon"><svg aria-hidden="true"><use href="#ic-home"/></svg></span>
+                    <span class="fc-card__source">4 · Seite „Die HK-RUG“</span>
+                    <span class="fc-verdict fc-verdict--verschwiegen">Verschwiegen</span>
+                </div>
+                <div class="fc-quote"><span class="fc-quote__label">Der Betreiber schreibt</span><p>„Die Gesellschaft wurde 2012 unter dem Namen ‚Deponie Berkum GmbH &amp; Co. KG‘ mit dem Ziel gegründet, die Deponiekapazitäten des Geländes der Deponie Berkum zu nutzen und somit flächenschonend Deponiebedarf zu decken.“</p></div>
+                <div class="fc-answer">
+                    <p class="fc-answer__text"><span class="fc-answer-label">Unsere Frage:</span> Was die Webseite verschweigt: Der Verkauf des Geländes an die HK-RUG gilt <strong>nur, wenn die neue Deponie genehmigt wird</strong> – das bestätigte der Rechtsvertreter der Peiner Träger beim Forum am 13. Mai 2026. Im Klartext: Wird nicht genehmigt, bleibt die Peiner Träger GmbH in der Verantwortung und muss die begonnene Abdichtung zu Ende bringen. Die „Reaktivierung“ ist damit vor allem eins: der Ausweg der Peiner Träger aus der eigenen Sanierungspflicht. Beim Ortstermin am 22. Juli 2026 wurde es öffentlich bestätigt: Das Gelände gehört bis zur Genehmigung der <strong>Salzgitter AG</strong> und geht erst danach an den Betreiber über (Braunschweiger Zeitung, 22.07.2026). Warum steht davon kein Wort auf der Webseite?</p>
+                </div>
             </article>
 
-            <article class="fc-block">
-                <p class="fc-block__source">5 · Seite „Deponie-Infos“</p>
-                <blockquote><p><span class="fc-quote-label">Der Betreiber schreibt:</span> „Gesamtmenge: ca. 1,6 Millionen Kubikmeter (davon ca. 900.000 m³ neu angelieferte Abfälle)“</p></blockquote>
-                <p class="fc-frage"><strong class="fc-frage-label">Unsere Frage:</strong> Die Rechnung dahinter: Rund <strong>700.000 Kubikmeter alte Industrieschlämme</strong> – seit Jahrzehnten ruhend im Boden – sollen aufgebaggert und umgelagert werden. Was wird dabei an Staub und Schadstoffen frei, direkt neben Berkum? Eine reine Abdeckung würde die Altlast in Ruhe lassen.</p>
+            <article class="fc-card" id="fc-5">
+                <div class="fc-card__head">
+                    <span class="fc-card__icon"><svg aria-hidden="true"><use href="#ic-mountain"/></svg></span>
+                    <span class="fc-card__source">5 · Seite „Deponie-Infos“</span>
+                    <span class="fc-verdict fc-verdict--verschwiegen">Verschwiegen</span>
+                </div>
+                <div class="fc-quote"><span class="fc-quote__label">Der Betreiber schreibt</span><p>„Gesamtmenge: ca. 1,6 Millionen Kubikmeter (davon ca. 900.000 m³ neu angelieferte Abfälle)“</p></div>
+                <div class="fc-answer">
+                    <div class="fc-figure"><div class="fc-figure__num" style="font-size:1.05rem">700.000</div><div class="fc-figure__label">m³ Altschlamm</div></div>
+                    <p class="fc-answer__text"><span class="fc-answer-label">Unsere Frage:</span> Die Rechnung dahinter: Rund <strong>700.000 Kubikmeter alte Industrieschlämme</strong> – seit Jahrzehnten ruhend im Boden – sollen aufgebaggert und umgelagert werden. Was wird dabei an Staub und Schadstoffen frei, direkt neben Berkum? Eine reine Abdeckung würde die Altlast in Ruhe lassen.</p>
+                </div>
             </article>
 
-            <article class="fc-block">
-                <p class="fc-block__source">6 · Seite „Deponie-Infos“</p>
-                <blockquote><p><span class="fc-quote-label">Der Betreiber schreibt:</span> „Eingelagert werden ausschließlich mineralische Abfälle – vor allem Bau- und Abbruchmaterialien wie Boden, Beton, Schlämme, Ziegel und Glas.“</p></blockquote>
-                <p class="fc-frage"><strong class="fc-frage-label">Unsere Frage:</strong> Klingt harmlos – nach Baustelle. Warum fehlt auf dieser Seite das Wort <strong>Asbest</strong>? Erst wer bis ins FAQ klickt, erfährt: Auch asbesthaltige Materialien sollen eingelagert werden, dazu Schlacken und Aschen. Warum steht das Unangenehme nicht dort, wo die Zahlen stehen?</p>
+            <article class="fc-card" id="fc-6">
+                <div class="fc-card__head">
+                    <span class="fc-card__icon"><svg aria-hidden="true"><use href="#ic-alert"/></svg></span>
+                    <span class="fc-card__source">6 · Seite „Deponie-Infos“</span>
+                    <span class="fc-verdict fc-verdict--unvollstaendig">Unvollständig</span>
+                </div>
+                <div class="fc-quote"><span class="fc-quote__label">Der Betreiber schreibt</span><p>„Eingelagert werden ausschließlich mineralische Abfälle – vor allem Bau- und Abbruchmaterialien wie Boden, Beton, Schlämme, Ziegel und Glas.“</p></div>
+                <div class="fc-answer">
+                    <p class="fc-answer__text"><span class="fc-answer-label">Unsere Frage:</span> Klingt harmlos – nach Baustelle. Warum fehlt auf dieser Seite das Wort <strong>Asbest</strong>? Erst wer bis ins FAQ klickt, erfährt: Auch asbesthaltige Materialien sollen eingelagert werden, dazu Schlacken und Aschen. Warum steht das Unangenehme nicht dort, wo die Zahlen stehen?</p>
+                </div>
             </article>
 
-            <article class="fc-block">
-                <p class="fc-block__source">7 · Visualisierung (Born/Ermel)</p>
-                <blockquote><p><span class="fc-quote-label">Der Betreiber zeigt:</span> eine Visualisierung der fertigen Deponie – ein flacher, grüner, bewachsener Hügel aus der Vogelperspektive.</p></blockquote>
-                <p class="fc-frage"><strong class="fc-frage-label">Unsere Frage:</strong> Warum nur dieses Bild? Es zeigt den Zustand <strong>nach 20 und mehr Jahren</strong> – aus einer Drohnenhöhe, aus der 35 Meter wie eine Wiese wirken. Was wir <strong>jahrzehntelang</strong> tatsächlich sehen werden, zeigt kein einziges Bild: offene Schüttflächen, Bagger, Verdichter, LKW, Staub – einen wachsenden grauen Berg, höher als das Peiner Rathaus. Warum gibt es keine realistische Darstellung der aktiven Deponie aus Sicht der Anwohner – vom Langen Damm, von Berkum, von der B65?</p>
+            <article class="fc-card" id="fc-7">
+                <div class="fc-card__head">
+                    <span class="fc-card__icon"><svg aria-hidden="true"><use href="#ic-eye"/></svg></span>
+                    <span class="fc-card__source">7 · Visualisierung (Born/Ermel)</span>
+                    <span class="fc-verdict fc-verdict--offen">Nur der Endzustand</span>
+                </div>
+                <div class="fc-quote"><span class="fc-quote__label">Der Betreiber zeigt</span><p>eine Visualisierung der fertigen Deponie – ein flacher, grüner, bewachsener Hügel aus der Vogelperspektive.</p></div>
+                <div class="fc-answer">
+                    <div class="fc-figure"><div class="fc-figure__num">20+</div><div class="fc-figure__label">Jahre Baustelle</div></div>
+                    <p class="fc-answer__text"><span class="fc-answer-label">Unsere Frage:</span> Warum nur dieses Bild? Es zeigt den Zustand <strong>nach 20 und mehr Jahren</strong> – aus einer Drohnenhöhe, aus der 35 Meter wie eine Wiese wirken. Was wir <strong>jahrzehntelang</strong> tatsächlich sehen werden, zeigt kein einziges Bild: offene Schüttflächen, Bagger, Verdichter, LKW, Staub – einen wachsenden grauen Berg, höher als das Peiner Rathaus. Warum gibt es keine realistische Darstellung der aktiven Deponie aus Sicht der Anwohner – vom Langen Damm, von Berkum, von der B65?</p>
+                </div>
             </article>
 
-            <article class="fc-block">
-                <p class="fc-block__source">8 · FAQ, Frage 17</p>
-                <blockquote><p><span class="fc-quote-label">Der Betreiber schreibt:</span> „Das Monitoring im Auftrag der HK-RUG läuft seit 2019 und wird von einem unabhängigen Fachbüro durchgeführt.“</p></blockquote>
-                <p class="fc-frage"><strong class="fc-frage-label">Unsere Frage:</strong> Wo sind die Messwerte? Der Betreiber begründet das ganze Projekt mit Schadstoffen im Grundwasser – veröffentlicht aber seit sieben Jahren keine einzige Zahl. <strong>Wir haben das Grundwasser in Berkum selbst testen lassen: Das Ergebnis war unbedenklich.</strong> Warum sollen wir dem Gefahren-Szenario glauben, solange die Daten unter Verschluss bleiben? Und wenn wirklich Gefahr im Verzug wäre: Warum wurde die 2010 begonnene Abdichtung gestoppt – und warum soll jetzt jahrelang aufgebaggert statt schnell abgedeckt werden?</p>
+            <article class="fc-card" id="fc-8">
+                <div class="fc-card__head">
+                    <span class="fc-card__icon"><svg aria-hidden="true"><use href="#ic-droplets"/></svg></span>
+                    <span class="fc-card__source">8 · FAQ, Frage 17</span>
+                    <span class="fc-verdict fc-verdict--widerspruch">Widerspruch</span>
+                </div>
+                <div class="fc-quote"><span class="fc-quote__label">Der Betreiber schreibt</span><p>„Das Monitoring im Auftrag der HK-RUG läuft seit 2019 und wird von einem unabhängigen Fachbüro durchgeführt.“</p></div>
+                <div class="fc-answer">
+                    <div class="fc-figure"><div class="fc-figure__num">26</div><div class="fc-figure__label">Messstellen</div></div>
+                    <p class="fc-answer__text"><span class="fc-answer-label">Unsere Frage:</span> Wo sind die Messwerte? Der Betreiber begründet das ganze Projekt mit Schadstoffen im Grundwasser – veröffentlicht aber seit sieben Jahren keine einzige Zahl. <strong>Wir haben das Grundwasser in Berkum selbst testen lassen: Das Ergebnis war unbedenklich.</strong> Warum sollen wir dem Gefahren-Szenario glauben, solange die Daten unter Verschluss bleiben? Und wenn wirklich Gefahr im Verzug wäre: Warum wurde die 2010 begonnene Abdichtung gestoppt – und warum soll jetzt jahrelang aufgebaggert statt schnell abgedeckt werden?</p>
+                </div>
             </article>
 
-            <article class="fc-block">
-                <p class="fc-block__source">9 · FAQ, Frage 8</p>
-                <blockquote><p><span class="fc-quote-label">Der Betreiber schreibt:</span> „Im Betrieb werden durchschnittlich ca. 20 LKW-Ladungen pro Tag erwartet.“</p></blockquote>
-                <p class="fc-frage"><strong class="fc-frage-label">Unsere Frage:</strong> Durchschnittlich – und an Spitzentagen? 20 Ladungen heißen <strong>40 Fahrten</strong> (voll hin, leer zurück), laut dem damaligen Geschäftsführer Brozio schwankt es zwischen 5 und 30 Ladungen. Wie viele LKW rollen also wirklich, wenn es voll wird – über 16 bis 20 Jahre, rund 100.000 Anlieferungen?</p>
+            <article class="fc-card" id="fc-9">
+                <div class="fc-card__head">
+                    <span class="fc-card__icon"><svg aria-hidden="true"><use href="#ic-truck"/></svg></span>
+                    <span class="fc-card__source">9 · FAQ, Frage 8</span>
+                    <span class="fc-verdict fc-verdict--unvollstaendig">Unvollständig</span>
+                </div>
+                <div class="fc-quote"><span class="fc-quote__label">Der Betreiber schreibt</span><p>„Im Betrieb werden durchschnittlich ca. 20 LKW-Ladungen pro Tag erwartet.“</p></div>
+                <div class="fc-answer">
+                    <div class="fc-figure"><div class="fc-figure__num">40</div><div class="fc-figure__label">Fahrten/Tag</div></div>
+                    <p class="fc-answer__text"><span class="fc-answer-label">Unsere Frage:</span> Durchschnittlich – und an Spitzentagen? 20 Ladungen heißen <strong>40 Fahrten</strong> (voll hin, leer zurück), laut dem damaligen Geschäftsführer Brozio schwankt es zwischen 5 und 30 Ladungen. Wie viele LKW rollen also wirklich, wenn es voll wird – über 16 bis 20 Jahre, rund 100.000 Anlieferungen?</p>
+                </div>
             </article>
 
-            <article class="fc-block">
-                <p class="fc-block__source">10 · FAQ, Fragen 10 und 12 (Asbest)</p>
-                <blockquote><p><span class="fc-quote-label">Der Betreiber schreibt:</span> „Verpackungen werden auf dem Gelände nicht geöffnet. Das Material wird nach dem Einbau sofort abgedeckt.“</p></blockquote>
-                <p class="fc-frage"><strong class="fc-frage-label">Unsere Frage:</strong> Und wenn ein Big Bag beim Abkippen reißt? Beim Überfahren mit dem Verdichter? Das passiert auf Deponien regelmäßig. Wird die Asbest-Belastung der Luft <strong>an den Wohnhäusern</strong> gemessen – 330 Meter entfernt? Dazu steht: nichts.</p>
+            <article class="fc-card" id="fc-10">
+                <div class="fc-card__head">
+                    <span class="fc-card__icon"><svg aria-hidden="true"><use href="#ic-wind"/></svg></span>
+                    <span class="fc-card__source">10 · FAQ, Fragen 10 und 12 (Asbest)</span>
+                    <span class="fc-verdict fc-verdict--offen">Offene Frage</span>
+                </div>
+                <div class="fc-quote"><span class="fc-quote__label">Der Betreiber schreibt</span><p>„Verpackungen werden auf dem Gelände nicht geöffnet. Das Material wird nach dem Einbau sofort abgedeckt.“</p></div>
+                <div class="fc-answer">
+                    <div class="fc-figure"><div class="fc-figure__num">330 m</div><div class="fc-figure__label">zum Wohnhaus</div></div>
+                    <p class="fc-answer__text"><span class="fc-answer-label">Unsere Frage:</span> Und wenn ein Big Bag beim Abkippen reißt? Beim Überfahren mit dem Verdichter? Das passiert auf Deponien regelmäßig. Wird die Asbest-Belastung der Luft <strong>an den Wohnhäusern</strong> gemessen – 330 Meter entfernt? Dazu steht: nichts.</p>
+                </div>
             </article>
 
-            <article class="fc-block">
-                <p class="fc-block__source">11 · FAQ, Frage 5</p>
-                <blockquote><p><span class="fc-quote-label">Der Betreiber schreibt:</span> „Im Jahr 2022 fielen fast 208 Mio t. mineralische Bauabfälle an.“</p></blockquote>
-                <p class="fc-frage"><strong class="fc-frage-label">Unsere Frage:</strong> Das ist die Zahl für <strong>ganz Deutschland</strong> (Quelle der Angabe: Umweltbundesamt). Warum muss der Abfall ausgerechnet 330 Meter vor unsere Haustür? Und wer profitiert? Gesellschafter der Betreiberfirma sind ein Baukonzern (STRABAG) und ein Entsorgungsunternehmen – die den „dringenden Bedarf“ selbst erzeugen. <a href="deponien.html">In Norddeutschland gibt es bereits 24 DK-II-Deponien &rarr;</a></p>
+            <article class="fc-card" id="fc-11">
+                <div class="fc-card__head">
+                    <span class="fc-card__icon"><svg aria-hidden="true"><use href="#ic-factory"/></svg></span>
+                    <span class="fc-card__source">11 · FAQ, Frage 5</span>
+                    <span class="fc-verdict fc-verdict--offen">Bundeszahl</span>
+                </div>
+                <div class="fc-quote"><span class="fc-quote__label">Der Betreiber schreibt</span><p>„Im Jahr 2022 fielen fast 208 Mio t. mineralische Bauabfälle an.“</p></div>
+                <div class="fc-answer">
+                    <div class="fc-figure"><div class="fc-figure__num">208</div><div class="fc-figure__label">Mio t bundesweit</div></div>
+                    <p class="fc-answer__text"><span class="fc-answer-label">Unsere Frage:</span> Das ist die Zahl für <strong>ganz Deutschland</strong> (Quelle der Angabe: Umweltbundesamt). Warum muss der Abfall ausgerechnet 330 Meter vor unsere Haustür? Und wer profitiert? Gesellschafter der Betreiberfirma sind ein Baukonzern (STRABAG) und ein Entsorgungsunternehmen – die den „dringenden Bedarf“ selbst erzeugen. <a href="deponien.html">In Norddeutschland gibt es bereits 24 DK-II-Deponien &rarr;</a></p>
+                </div>
             </article>
 
-            <article class="fc-block">
-                <p class="fc-block__source">12 · FAQ, Frage 15</p>
-                <blockquote><p><span class="fc-quote-label">Der Betreiber schreibt:</span> „Mögliche Auswirkungen auf Immobilienwerte werden sachlich im Rahmen des Planfeststellungsverfahrens geprüft.“</p></blockquote>
-                <p class="fc-frage"><strong class="fc-frage-label">Unsere Frage:</strong> Beim Forum am 13. Mai klang das noch anders – zum Ausgleichsfonds hieß es klar: „Nein. Das ist nicht vorgesehen.“ (Brozio, PAZ 17.05.2026). Was gilt denn nun? Gibt es eine Entschädigung, wenn unsere Häuser an Wert verlieren – ja oder nein?</p>
+            <article class="fc-card" id="fc-12">
+                <div class="fc-card__head">
+                    <span class="fc-card__icon"><svg aria-hidden="true"><use href="#ic-home"/></svg></span>
+                    <span class="fc-card__source">12 · FAQ, Frage 15</span>
+                    <span class="fc-verdict fc-verdict--widerspruch">Widerspruch</span>
+                </div>
+                <div class="fc-quote"><span class="fc-quote__label">Der Betreiber schreibt</span><p>„Mögliche Auswirkungen auf Immobilienwerte werden sachlich im Rahmen des Planfeststellungsverfahrens geprüft.“</p></div>
+                <div class="fc-answer">
+                    <div class="fc-figure"><div class="fc-figure__num">0 €</div><div class="fc-figure__label">Ausgleich</div></div>
+                    <p class="fc-answer__text"><span class="fc-answer-label">Unsere Frage:</span> Beim Forum am 13. Mai klang das noch anders – zum Ausgleichsfonds hieß es klar: „Nein. Das ist nicht vorgesehen.“ (Brozio, PAZ 17.05.2026). Was gilt denn nun? Gibt es eine Entschädigung, wenn unsere Häuser an Wert verlieren – ja oder nein?</p>
+                </div>
             </article>
 
-            <article class="fc-block">
-                <p class="fc-block__source">13 · FAQ, Frage 7</p>
-                <blockquote><p><span class="fc-quote-label">Der Betreiber schreibt:</span> „Die geplante Betriebsdauer beträgt voraussichtlich 16 bis 20 Jahre.“</p></blockquote>
-                <p class="fc-frage"><strong class="fc-frage-label">Unsere Frage:</strong> Plus 2–5 Jahre Genehmigung, plus Stilllegung, plus mindestens 30 Jahre Nachsorge – ein Projekt für <strong>zwei Generationen</strong>. Wer haftet in 50 Jahren, eine kleine GmbH &amp; Co. KG mit beschränkter Haftung? Heute ist die Peiner Träger GmbH verantwortlich – eine Tochter im Salzgitter-Konzern. Nach dem Verkauf nicht mehr. Warum sollten wir die Altlast einer Konzerntochter gegen das Versprechen einer kleinen GmbH tauschen?</p>
+            <article class="fc-card" id="fc-13">
+                <div class="fc-card__head">
+                    <span class="fc-card__icon"><svg aria-hidden="true"><use href="#ic-clock"/></svg></span>
+                    <span class="fc-card__source">13 · FAQ, Frage 7</span>
+                    <span class="fc-verdict fc-verdict--unvollstaendig">Unvollständig</span>
+                </div>
+                <div class="fc-quote"><span class="fc-quote__label">Der Betreiber schreibt</span><p>„Die geplante Betriebsdauer beträgt voraussichtlich 16 bis 20 Jahre.“</p></div>
+                <div class="fc-answer">
+                    <div class="fc-figure"><div class="fc-figure__num">50+</div><div class="fc-figure__label">Jahre gesamt</div></div>
+                    <p class="fc-answer__text"><span class="fc-answer-label">Unsere Frage:</span> Plus 2–5 Jahre Genehmigung, plus Stilllegung, plus mindestens 30 Jahre Nachsorge – ein Projekt für <strong>zwei Generationen</strong>. Wer haftet in 50 Jahren, eine kleine GmbH &amp; Co. KG mit beschränkter Haftung? Heute ist die Peiner Träger GmbH verantwortlich – eine Tochter im Salzgitter-Konzern. Nach dem Verkauf nicht mehr. Warum sollten wir die Altlast einer Konzerntochter gegen das Versprechen einer kleinen GmbH tauschen?</p>
+                </div>
             </article>
 
         </section>

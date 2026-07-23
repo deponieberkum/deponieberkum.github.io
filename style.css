@@ -1622,36 +1622,6 @@ footer nav a:hover { color: #fff; text-decoration: underline; }
 .downloads__note strong { color: #fff; }
 
 /* Faktencheck-Unterseite */
-.fc-block {
-    margin: 0 0 2.25rem;
-}
-.fc-block__source {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-muted);
-    margin: 0 0 0.5rem;
-    font-weight: 600;
-}
-.fc-block blockquote {
-    margin: 0 0 0.85rem;
-    padding: 0.75rem 1rem;
-    border-left: 4px solid var(--color-border);
-    background: var(--color-gray);
-    border-radius: 0 var(--radius) var(--radius) 0;
-    font-style: italic;
-    line-height: 1.6;
-}
-.fc-block blockquote p { margin: 0; }
-.fc-block blockquote .fc-quote-label {
-    font-style: normal;
-    font-weight: 700;
-}
-.fc-frage {
-    margin: 0;
-    line-height: 1.65;
-}
-.fc-frage strong.fc-frage-label { color: var(--color-accent); }
 .fc-missing {
     margin: 1rem 0 0;
     padding: 0;
@@ -1789,3 +1759,146 @@ footer nav a:hover { color: #fff; text-decoration: underline; }
 }
 .news-compact a.news-item__title { color: var(--color-text); text-decoration: none; }
 .news-compact a.news-item__title:hover { color: var(--color-accent); }
+
+/* ===== Faktencheck-Karten (Redesign) ===== */
+/* Kurzfassungs-Index */
+.fc-index {
+    background: var(--color-dark);
+    color: #fff;
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    margin: 1.5rem 0 2rem;
+}
+.fc-index__title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 0 0.75rem;
+}
+.fc-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+.fc-chip {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    background: #555;
+    transition: transform 0.12s ease, filter 0.12s ease;
+    white-space: nowrap;
+}
+.fc-chip:hover, .fc-chip:focus { transform: translateY(-1px); filter: brightness(1.12); color: #fff; text-decoration: none; }
+.fc-chip--verschwiegen { background: #2b2b2b; }
+.fc-chip--unvollstaendig { background: #b26a00; }
+.fc-chip--widerspruch { background: var(--color-accent); }
+.fc-chip--offen { background: #55565a; }
+.fc-chip--bestaetigt { background: #1b5e20; }
+
+/* Karte */
+.fc-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    padding: 1.25rem 1.4rem;
+    margin: 0 0 1.25rem;
+    scroll-margin-top: 110px;
+}
+.fc-card__head {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
+    flex-wrap: wrap;
+}
+.fc-card__icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--color-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.fc-card__icon svg { width: 18px; height: 18px; color: var(--color-accent); }
+.fc-card__source {
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    font-weight: 600;
+}
+.fc-verdict {
+    margin-left: auto;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    color: #fff;
+    white-space: nowrap;
+}
+.fc-verdict--verschwiegen { background: var(--color-dark); }
+.fc-verdict--unvollstaendig { background: #b26a00; }
+.fc-verdict--widerspruch { background: var(--color-accent); }
+.fc-verdict--offen { background: #e9e9e6; color: #444; }
+.fc-verdict--bestaetigt { background: #1b5e20; }
+
+/* Zitatkasten */
+.fc-quote {
+    border-left: 3px solid #cfcfca;
+    background: var(--color-gray);
+    border-radius: 0 8px 8px 0;
+    padding: 0.6rem 0.9rem;
+    margin: 0 0 0.9rem;
+}
+.fc-quote__label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 0.2rem;
+}
+.fc-quote p { margin: 0; font-style: italic; line-height: 1.55; color: #333; }
+
+/* Antwort mit optionaler Kennzahl */
+.fc-answer {
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+}
+.fc-figure {
+    flex-shrink: 0;
+    text-align: center;
+    background: #fdeaed;
+    border-radius: 8px;
+    padding: 0.5rem 0.6rem;
+    min-width: 66px;
+}
+.fc-figure__num { font-size: 1.3rem; font-weight: 800; color: var(--color-accent); line-height: 1.05; }
+.fc-figure__label { font-size: 0.68rem; color: var(--color-accent); line-height: 1.2; }
+.fc-answer__text { margin: 0; line-height: 1.6; }
+.fc-answer__text .fc-answer-label { color: var(--color-accent); font-weight: 700; }
+
+@media (max-width: 540px) {
+    .fc-card { padding: 1rem 1.1rem; }
+    .fc-verdict { margin-left: 0; }
+    .fc-card__head { gap: 0.5rem; }
+    .fc-answer { flex-direction: column; gap: 0.55rem; }
+    .fc-figure {
+        align-self: flex-start;
+        min-width: 0;
+        padding: 0.4rem 0.7rem;
+        display: flex;
+        align-items: baseline;
+        gap: 0.4rem;
+    }
+    .fc-figure__num { font-size: 1.15rem; }
+}
