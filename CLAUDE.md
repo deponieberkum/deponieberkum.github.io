@@ -30,6 +30,11 @@ Gehostet via GitHub Pages unter der in `CNAME` hinterlegten Domain (keine-deponi
 - `deponien.html` – Karte der 24 bestehenden DK-II-Deponien in Norddeutschland, erlaubte
   Klasse-II-Abfälle (`#klasse-zwei`) und Hintergrund zu den Betreiber-Konzernen.
 - `faktencheck.html` – Faktencheck der Betreiber-Webseite deponie-berkum.de (Zitat-Frage-Blöcke).
+- `aktuelles.html` – chronologische Sammlung von Presse, Terminen und Veranstaltungen (Badges
+  Presse/Termin/Veranstaltung/Mitteilung). **Neue Meldung:** ein `<li class="news-item">` ganz oben
+  in die `<ol class="news-list">` einfügen (Marker-Kommentar dort). Das kompakte „Aktuelles"-Band
+  auf der Startseite (`#aktuelles` in `index.html`) zeigt die zwei neuesten Meldungen – bei Bedarf
+  dort spiegeln. Fremde Zeitungsartikel nur verlinken/zitieren, keine Artikel-PDFs hosten.
 - `geschichte.html` – Zeitleiste der Deponie-Geschichte plus Grundwasser-Abschnitt.
 - `vortrag.html` – Dokumentation der Info-Veranstaltung im Forum Peine am 13.05.2026.
 - `impressum.html`, `datenschutz.html` – Impressum und Datenschutzerklärung.
