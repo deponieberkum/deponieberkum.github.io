@@ -385,6 +385,14 @@ body {
     margin-top: 1.75rem;
 }
 .aufruf-cta a:not(.btn-primary) { text-decoration: underline; text-underline-offset: 2px; font-weight: 600; }
+.aufruf-fragen {
+    margin: 0.75rem 0 0;
+    padding-left: 1.2rem;
+}
+.aufruf-fragen li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
 .section--accent { background: var(--color-dark); color: #fff; border-bottom: none; }
 .section--accent .section__title { color: #fff; }
 .section--accent a { color: #fff; }
