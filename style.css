@@ -376,7 +376,7 @@ body {
     border-bottom: none;
 }
 .section--alert .section__title { color: #fff; }
-.section--alert a { color: #fff; }
+.section--alert a:not(.btn-primary) { color: #fff; }
 .aufruf-cta {
     display: flex;
     flex-wrap: wrap;
