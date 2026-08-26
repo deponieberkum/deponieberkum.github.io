@@ -22,6 +22,14 @@ Gehostet via GitHub Pages unter der in `CNAME` hinterlegten Domain (keine-deponi
 - Platzhalter im Content sind mit `[…]` markiert und müssen vor öffentlicher Bewerbung ausgefüllt
   werden (siehe README.md).
 
+## Redaktionsregel für die Startseite (Schaufenster-Prinzip)
+
+Nutzer-Feedback (Aug. 2026): Die Seite „erschlägt einen mit Informationen". Deshalb gilt für
+`index.html`: **je Abschnitt 2–3 Sätze + eine Kernzahl/ein Bild + Link auf die Unterseite** mit der
+Tiefe. Details gehören in native Aufklapper `<details class="disclosure">` (kein JavaScript) oder auf
+die Unterseiten. **Pro Absatz höchstens eine `<strong>`-Auszeichnung.** Richtwert: die Startseite
+bleibt unter ~1.500 sichtbaren Wörtern (messen mit einem Skript, das `<details>`-Inhalte ausklammert).
+
 ## Struktur
 
 - `index.html` – Startseite: Hero, Abschnitte zu Fakten/Risiken/Zeitachse (jeweils
