@@ -4,3 +4,19 @@ Thumbs.db
 .vscode/
 .idea/
 .claude/
+
+# Internes Quellmaterial - NICHT committen.
+# Dieses Repo ist die Quelle von keine-deponie-berkum.de: Jede committete Datei
+# ist danach oeffentlich unter der Domain abrufbar. Presseartikel, Behoerden-
+# unterlagen und privater Schriftverkehr bleiben deshalb lokal.
+infomaterial_nur_intern/
+Vortrag Forum 13052026/
+/Deponie-Berkum-Planung-DK-II.pdf
+
+# Nur ausdruecklich freigegebene Dateien aus material/ werden ausgeliefert.
+# Neues Asset freigeben: hier mit "!" ergaenzen (oder git add -f).
+[Mm]aterial/*
+![Mm]aterial/beschlussakte-deponie-berkum.pdf
+![Mm]aterial/flyer-keine-deponie-berkum.pdf
+![Mm]aterial/podcast-01-asbestberg-berkum.m4a
+![Mm]aterial/unterschriftenliste-keine-deponie-berkum.pdf

@@ -38,6 +38,13 @@ bleibt unter ~1.500 sichtbaren Wörtern (messen mit einem Skript, das `<details>
 - `deponien.html` – Karte der 24 bestehenden DK-II-Deponien in Norddeutschland, erlaubte
   Klasse-II-Abfälle (`#klasse-zwei`) und Hintergrund zu den Betreiber-Konzernen.
 - `faktencheck.html` – Faktencheck der Betreiber-Webseite deponie-berkum.de (Zitat-Frage-Blöcke).
+  Karte 14 zitiert abweichend nicht die Webseite, sondern die Antragsunterlage zum Scoping-Termin
+  (20.12.2023, per UIG herausgegeben) – Quelle liegt in `infomaterial_nur_intern/` und wird bewusst
+  nicht ausgeliefert; nur zitieren, nicht hosten.
+- `sicherheitsleistung.html` – Haftung und Sicherheitsleistung nach § 18 Deponieverordnung: die drei
+  abzusichernden Risiken (Havarie, Umlagerung, Nachsorge), Fragenkatalog an die Genehmigungsbehörde
+  und die Forderung nach Offenlegung der Bankbürgschaften. Verlinkt aus Forderung 5, der
+  Risiko-Kachel auf der Startseite und dem Faktencheck – bewusst nicht in der Topnav.
 - `aktuelles.html` – chronologische Sammlung von Presse, Terminen und Veranstaltungen (Badges
   Presse/Termin/Veranstaltung/Mitteilung). **Neue Meldung:** ein `<li class="news-item">` ganz oben
   in die `<ol class="news-list">` einfügen (Marker-Kommentar dort). Das kompakte „Aktuelles"-Band
