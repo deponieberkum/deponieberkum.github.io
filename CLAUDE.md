@@ -45,6 +45,13 @@ bleibt unter ~1.500 sichtbaren Wörtern (messen mit einem Skript, das `<details>
   abzusichernden Risiken (Havarie, Umlagerung, Nachsorge), Fragenkatalog an die Genehmigungsbehörde
   und die Forderung nach Offenlegung der Bankbürgschaften. Verlinkt aus Forderung 5, der
   Risiko-Kachel auf der Startseite und dem Faktencheck – bewusst nicht in der Topnav.
+- `grundwasser.html` – „Aufbaggern oder abdichten?“: fünf Behauptungen zum Grundwasser-Narrativ des
+  Betreibers (`#gw-1` … `#gw-5`), je mit kurzer Antwort und Aufklapper mit Belegen, dazu ein
+  Querschnitts-SVG (Plan des Betreibers vs. Abdeckung von oben). Zitate stammen überwiegend aus der
+  Vorhabensbeschreibung vom 20.12.2023 (wie Faktencheck-Karte 14: nur zitieren, nicht hosten) und dem
+  Scoping-Protokoll; jedes Zitat nennt Quelle, Kapitel und Seite. In der Topnav verlinkt, außerdem aus der
+  Grundwasser-Kachel und Forderung 3 der Startseite, aus `geschichte.html` und den Faktencheck-Karten 1
+  und 8. Eigene Stile am Ende von `style.css` („Grundwasser-Seite“).
 - `aktuelles.html` – chronologische Sammlung von Presse, Terminen und Veranstaltungen (Badges
   Presse/Termin/Veranstaltung/Mitteilung). **Neue Meldung:** ein `<li class="news-item">` ganz oben
   in die `<ol class="news-list">` einfügen (Marker-Kommentar dort). Das kompakte „Aktuelles"-Band

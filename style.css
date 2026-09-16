@@ -925,7 +925,7 @@ strong { font-weight: 700; }
     line-height: 1.5;
 }
 .mitmachen-cta {
-    margin: 1.25rem 0 0;
+    margin: 1.5rem 0 1rem;
 }
 
 /* Timeline */
@@ -1062,7 +1062,7 @@ strong { font-weight: 700; }
     padding: 1rem 1.75rem;
 }
 .petition-cta__note {
-    margin: 1.25rem 0 0;
+    margin: 1.5rem 0 1rem;
     font-size: 0.82rem;
     color: var(--color-muted);
     line-height: 1.5;
@@ -1333,7 +1333,7 @@ footer nav a:hover { color: #fff; text-decoration: underline; }
 .dk2-stats {
     list-style: none;
     padding: 0;
-    margin: 1.25rem 0 0;
+    margin: 1.5rem 0 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
@@ -2000,3 +2000,41 @@ details.disclosure > summary:focus-visible { outline: 2px solid var(--color-acce
 }
 .section--alert details.disclosure > summary:hover,
 .section--accent details.disclosure > summary:hover { background: rgba(255, 255, 255, 0.12); }
+
+/* Grundwasser-Seite (grundwasser.html) */
+.gw-source {
+    border-left: 4px solid var(--color-accent);
+    padding: 0.75rem 1rem;
+    background: var(--color-gray);
+    margin: 1.5rem 0 1rem;
+    line-height: 1.6;
+}
+.gw-scheme {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.5rem;
+    padding: 1rem 0.75rem 0.5rem;
+}
+.scheme .gw-scheme svg { border-radius: 0; }
+.fc-answer__text.gw-more { margin-top: 0.6rem; }
+.fc-card details.disclosure { margin-top: 1rem; }
+.disclosure__body h4 {
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin: 1.1rem 0 0.4rem;
+}
+.disclosure__body .fc-quote { margin-bottom: 0.6rem; }
+.disclosure__body ul { margin: 0.3rem 0 0.6rem; padding-left: 1.2rem; }
+.disclosure__body ul.timeline { padding-left: 0; margin: 0.5rem 0 0.75rem; }
+.disclosure__body .timeline li { padding: 0.35rem 0 0.35rem 1.1rem; }
+.disclosure__body .timeline li::before { top: 0.75rem; }
+.fc-quote__label strong { color: var(--color-accent); }
+.fc-quote.gw-claim { padding: 0.8rem 1.1rem; margin-bottom: 1rem; }
+.fc-quote.gw-claim p {
+    font-size: clamp(1.2rem, 3.2vw, 1.5rem);
+    line-height: 1.35;
+    font-weight: 600;
+    color: var(--color-text);
+}
