@@ -53,58 +53,119 @@
         <section>
             <figure class="scheme" style="margin-top: 0;">
                 <div class="gw-scheme">
-                    <svg viewBox="0 0 340 285" role="img" aria-labelledby="gw-plan-title gw-plan-desc">
+                    <svg viewBox="0 0 360 310" role="img" aria-labelledby="gw-plan-title gw-plan-desc">
                         <title id="gw-plan-title">Plan des Betreibers</title>
                         <desc id="gw-plan-desc">Der Altabfall wird ausgehoben, auf einer neuen Basisabdichtung wieder eingebaut und mit neuem Abfall bis 35 Meter hoch aufgeschüttet. Abgedeckt wird erst nach Jahrzehnten. Der belastete Boden unter der alten Ablagerung bleibt im Grundwasser liegen.</desc>
-                        <defs>
-                            <pattern id="gw-hatch-a" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#c8102e" stroke-width="2"/></pattern>
-                        </defs>
-                        <text x="170" y="20" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a1a">Plan des Betreibers</text>
-                        <rect x="10" y="185" width="320" height="20" fill="#eee5d6"/>
-                        <rect x="10" y="205" width="320" height="45" fill="#dce9f4"/>
-                        <line x1="10" y1="185" x2="330" y2="185" stroke="#8a7a60" stroke-width="1"/>
-                        <text x="18" y="243" font-size="12" fill="#1f5f8b">Grundwasser</text>
-                        <rect x="65" y="196" width="200" height="22" fill="url(#gw-hatch-a)" opacity="0.55"/>
-                        <path d="M50 190 L90 52 L240 52 L280 190 Z" fill="#f5e6c8" stroke="#b26a00"/>
-                        <text x="165" y="102" text-anchor="middle" font-size="12" fill="#7a4800">neuer Abfall</text>
-                        <text x="165" y="118" text-anchor="middle" font-size="12" fill="#7a4800">bis 35 m hoch</text>
-                        <path d="M62 190 L70 158 L260 158 L268 190 Z" fill="#dcdcd7" stroke="#8a8a85"/>
-                        <text x="165" y="179" text-anchor="middle" font-size="12" fill="#444">Altabfall, umgelagert</text>
-                        <line x1="50" y1="191" x2="280" y2="191" stroke="#1a1a1a" stroke-width="4"/>
-                        <text x="284" y="178" font-size="11" fill="#444">Basis-</text>
-                        <text x="284" y="190" font-size="11" fill="#444">abdichtung</text>
-                        <line x1="88" y1="49" x2="242" y2="49" stroke="#1b5e20" stroke-width="4"/>
-                        <text x="165" y="41" text-anchor="middle" font-size="11" fill="#1b5e20">Abdeckung erst nach Jahrzehnten</text>
-                        <text x="165" y="272" text-anchor="middle" font-size="12" fill="#c8102e">belasteter Boden bleibt liegen</text>
+<defs>
+  <linearGradient id="gw-a-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef4f8"/><stop offset="1" stop-color="#fbfcfd"/></linearGradient>
+  <linearGradient id="gw-a-soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eadfcb"/><stop offset="1" stop-color="#dccdb1"/></linearGradient>
+  <linearGradient id="gw-a-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe2f1"/><stop offset="1" stop-color="#a9c9e3"/></linearGradient>
+  <linearGradient id="gw-a-old" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9bab5"/><stop offset="1" stop-color="#8f918b"/></linearGradient>
+  <linearGradient id="gw-a-new" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2d59b"/><stop offset="1" stop-color="#d9a652"/></linearGradient>
+  <radialGradient id="gw-a-glow" cx="0.5" cy="0.35" r="0.6"><stop offset="0" stop-color="#c8102e" stop-opacity="0.45"/><stop offset="1" stop-color="#c8102e" stop-opacity="0"/></radialGradient>
+  <pattern id="gw-a-dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r="0.9" fill="#b9a583"/><circle cx="6.5" cy="7.5" r="0.7" fill="#c7b594"/></pattern>
+  <pattern id="gw-a-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#c8102e" stroke-width="1.6"/></pattern>
+  <marker id="gw-a-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 Z" fill="#1f5f8b"/></marker>
+  <path id="gw-a-drop" d="M0 -7 C3.5 -1.5 4.5 1.5 0 4.5 C-4.5 1.5 -3.5 -1.5 0 -7 Z"/>
+</defs>
+<rect width="360" height="192" fill="url(#gw-a-sky)"/>
+<path d="M0 192 Q60 187 120 191 T240 190 T360 192 L360 310 L0 310 Z" fill="url(#gw-a-soil)"/>
+<path d="M0 192 Q60 187 120 191 T240 190 T360 192 L360 310 L0 310 Z" fill="url(#gw-a-dots)"/>
+<path d="M0 192 Q60 187 120 191 T240 190 T360 192" fill="none" stroke="#7fa35a" stroke-width="3"/>
+<path d="M0 236 Q22 231 45 236 T90 236 T135 236 T180 236 T225 236 T270 236 T315 236 T360 236 L360 310 L0 310 Z" fill="url(#gw-a-water)"/>
+<path d="M0 236 Q22 231 45 236 T90 236 T135 236 T180 236 T225 236 T270 236 T315 236 T360 236" fill="none" stroke="#1f5f8b" stroke-width="1.5"/>
+<line x1="0" y1="225" x2="360" y2="225" stroke="#1f5f8b" stroke-width="1" stroke-dasharray="4 3" opacity="0.8"/>
+<text x="356" y="221" text-anchor="end" font-size="10" fill="#1f5f8b" stroke="#eadfcb" stroke-width="3" paint-order="stroke">max. Grundwasserstand</text>
+<path d="M48 214 Q150 204 252 214 Q262 238 238 254 Q150 268 62 254 Q38 238 48 214 Z" fill="url(#gw-a-glow)"/>
+<path d="M48 214 Q150 204 252 214 Q262 238 238 254 Q150 268 62 254 Q38 238 48 214 Z" fill="url(#gw-a-hatch)" opacity="0.55"/>
+<text x="10" y="258" font-size="12" font-weight="700" fill="#1f5f8b">Grundwasser</text>
+<line x1="12" y1="268" x2="54" y2="268" stroke="#1f5f8b" stroke-width="1.5" marker-end="url(#gw-a-arrow)"/>
+<line x1="304" y1="268" x2="346" y2="268" stroke="#1f5f8b" stroke-width="1.5" marker-end="url(#gw-a-arrow)"/>
+<path d="M58 212 L78 170 L222 170 L242 212 Z" fill="url(#gw-a-old)"/>
+<path d="M68 191 L232 191 M73 181 L227 181 M63 201 L237 201" stroke="#7b7d77" stroke-width="0.8" fill="none"/>
+<path d="M78 170 L118 64 L182 64 L222 170 Z" fill="url(#gw-a-new)"/>
+<path d="M104.4 100 L195.6 100 M91.2 135 L208.8 135" stroke="#b8863a" stroke-width="0.8" fill="none"/>
+<g fill="#f6e3bb" stroke="#b26a00" stroke-width="0.8">
+  <rect x="104" y="146" width="16" height="12" rx="1.5"/><rect x="124" y="146" width="16" height="12" rx="1.5"/>
+  <rect x="160" y="146" width="16" height="12" rx="1.5"/><rect x="180" y="146" width="16" height="12" rx="1.5"/>
+  <rect x="142" y="112" width="16" height="12" rx="1.5"/>
+</g>
+<text x="150" y="92" text-anchor="middle" font-size="12.5" font-weight="700" fill="#6e4200">neuer Abfall</text>
+<line x1="50" y1="214" x2="250" y2="214" stroke="#1a1a1a" stroke-width="4.5" stroke-linecap="round"/>
+<g fill="#ffffff"><circle cx="60" cy="214" r="0.9"/><circle cx="68" cy="214" r="0.9"/><circle cx="76" cy="214" r="0.9"/><circle cx="84" cy="214" r="0.9"/><circle cx="92" cy="214" r="0.9"/><circle cx="100" cy="214" r="0.9"/><circle cx="108" cy="214" r="0.9"/><circle cx="116" cy="214" r="0.9"/><circle cx="124" cy="214" r="0.9"/><circle cx="132" cy="214" r="0.9"/><circle cx="140" cy="214" r="0.9"/><circle cx="148" cy="214" r="0.9"/><circle cx="156" cy="214" r="0.9"/><circle cx="164" cy="214" r="0.9"/><circle cx="172" cy="214" r="0.9"/><circle cx="180" cy="214" r="0.9"/><circle cx="188" cy="214" r="0.9"/><circle cx="196" cy="214" r="0.9"/><circle cx="204" cy="214" r="0.9"/><circle cx="212" cy="214" r="0.9"/><circle cx="220" cy="214" r="0.9"/><circle cx="228" cy="214" r="0.9"/><circle cx="236" cy="214" r="0.9"/></g>
+<line x1="114" y1="58" x2="186" y2="58" stroke="#2e7d32" stroke-width="3" stroke-dasharray="6 4" stroke-linecap="round"/>
+<text x="150" y="50" text-anchor="middle" font-size="11" fill="#2e7d32">Abdeckung erst nach Jahrzehnten</text>
+<g stroke="#1a1a1a" stroke-width="0.9">
+  <line x1="36" y1="64" x2="36" y2="190"/><line x1="31" y1="64" x2="41" y2="64"/><line x1="31" y1="190" x2="41" y2="190"/>
+  <line x1="41" y1="64" x2="112" y2="64" stroke-dasharray="2 3" opacity="0.6"/>
+</g>
+<rect x="6" y="110" width="32" height="30" fill="url(#gw-a-sky)"/>
+<text x="21" y="122" text-anchor="middle" font-size="11" fill="#1a1a1a">bis</text>
+<text x="21" y="135" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1a1a">35 m</text>
+<g transform="translate(290 66)">
+  <rect x="0" y="30" width="44" height="9" rx="4.5" fill="#4a4a4a"/>
+  <rect x="4" y="17" width="34" height="14" rx="2" fill="#e3a21a"/>
+  <rect x="23" y="6" width="13" height="12" rx="1.5" fill="#cfe3f0" stroke="#8a6200" stroke-width="1"/>
+  <polyline points="10,20 -6,0 -20,12" fill="none" stroke="#c98a10" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M-25 10 L-14 10 L-17 21 Z" fill="#4a4a4a"/>
+</g>
+<text x="302" y="122" text-anchor="middle" font-size="11" fill="#1a1a1a">wird aufgebaggert</text>
+<circle cx="222" cy="191" r="2.5" fill="#1a1a1a"/><polyline points="222,191 258,150 266,150" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="268" y="147" font-size="11" fill="#1a1a1a">Altabfall,</text>
+<text x="268" y="160" font-size="11" fill="#1a1a1a">umgelagert</text>
+<circle cx="246" cy="214" r="2.5" fill="#1a1a1a"/><polyline points="246,214 258,186 266,186" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="268" y="183" font-size="11" fill="#1a1a1a">neue Basis-</text>
+<text x="268" y="196" font-size="11" fill="#1a1a1a">abdichtung</text>
+<rect x="80.0" y="284" width="200" height="20" rx="10" fill="#ffffff" stroke="#c8102e" stroke-width="1.2"/><text x="180" y="298" text-anchor="middle" font-size="11.5" font-weight="700" fill="#c8102e">belasteter Boden bleibt liegen</text>
+<rect x="10" y="10" width="150" height="24" rx="12" fill="#9a5b00"/><text x="85.0" y="26.5" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Plan des Betreibers</text>
                     </svg>
-                    <svg viewBox="0 0 340 285" role="img" aria-labelledby="gw-bi-title gw-bi-desc">
+                    <svg viewBox="0 0 360 310" role="img" aria-labelledby="gw-bi-title gw-bi-desc">
                         <title id="gw-bi-title">Unser Vorschlag</title>
                         <desc id="gw-bi-desc">Die bestehende Ablagerung bleibt liegen und wird sofort von oben abgedeckt. Regenwasser läuft seitlich ab und sickert nicht mehr durch den Abfall. Der belastete Boden darunter bleibt ebenfalls liegen, bekommt aber keinen Nachschub.</desc>
-                        <defs>
-                            <pattern id="gw-hatch-b" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#c8102e" stroke-width="2"/></pattern>
-                        </defs>
-                        <text x="170" y="20" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a1a">Unser Vorschlag</text>
-                        <rect x="10" y="185" width="320" height="20" fill="#eee5d6"/>
-                        <rect x="10" y="205" width="320" height="45" fill="#dce9f4"/>
-                        <line x1="10" y1="185" x2="330" y2="185" stroke="#8a7a60" stroke-width="1"/>
-                        <text x="18" y="243" font-size="12" fill="#1f5f8b">Grundwasser</text>
-                        <rect x="72" y="208" width="186" height="16" fill="url(#gw-hatch-b)" opacity="0.55"/>
-                        <path d="M72 208 L92 140 L238 140 L258 208 Z" fill="#dcdcd7" stroke="#8a8a85"/>
-                        <text x="165" y="175" text-anchor="middle" font-size="12" fill="#444">bestehende Ablagerung</text>
-                        <text x="165" y="191" text-anchor="middle" font-size="12" fill="#444">bleibt liegen</text>
-                        <path d="M75 186 L89 136 L241 136 L255 186" fill="none" stroke="#1b5e20" stroke-width="4" stroke-linejoin="round"/>
-                        <text x="165" y="126" text-anchor="middle" font-size="12" fill="#1b5e20">Abdeckung von oben – jetzt</text>
-                        <g stroke="#1f5f8b" stroke-width="1.5">
-                            <line x1="125" y1="58" x2="125" y2="95"/>
-                            <line x1="165" y1="53" x2="165" y2="90"/>
-                            <line x1="205" y1="58" x2="205" y2="95"/>
-                        </g>
-                        <path d="M250 152 Q268 162 264 182 L322 182" fill="none" stroke="#1f5f8b" stroke-width="1.5" stroke-dasharray="4 3"/>
-                        <text x="165" y="45" text-anchor="middle" font-size="11" fill="#1f5f8b">Regen läuft seitlich ab</text>
-                        <text x="165" y="272" text-anchor="middle" font-size="12" fill="#c8102e">belasteter Boden bleibt – aber kein Nachschub</text>
+<defs>
+  <linearGradient id="gw-b-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef4f8"/><stop offset="1" stop-color="#fbfcfd"/></linearGradient>
+  <linearGradient id="gw-b-soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eadfcb"/><stop offset="1" stop-color="#dccdb1"/></linearGradient>
+  <linearGradient id="gw-b-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe2f1"/><stop offset="1" stop-color="#a9c9e3"/></linearGradient>
+  <linearGradient id="gw-b-old" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9bab5"/><stop offset="1" stop-color="#8f918b"/></linearGradient>
+  <linearGradient id="gw-b-new" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2d59b"/><stop offset="1" stop-color="#d9a652"/></linearGradient>
+  <radialGradient id="gw-b-glow" cx="0.5" cy="0.35" r="0.6"><stop offset="0" stop-color="#c8102e" stop-opacity="0.45"/><stop offset="1" stop-color="#c8102e" stop-opacity="0"/></radialGradient>
+  <pattern id="gw-b-dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r="0.9" fill="#b9a583"/><circle cx="6.5" cy="7.5" r="0.7" fill="#c7b594"/></pattern>
+  <pattern id="gw-b-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#c8102e" stroke-width="1.6"/></pattern>
+  <marker id="gw-b-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 Z" fill="#1f5f8b"/></marker>
+  <path id="gw-b-drop" d="M0 -7 C3.5 -1.5 4.5 1.5 0 4.5 C-4.5 1.5 -3.5 -1.5 0 -7 Z"/>
+</defs>
+<rect width="360" height="192" fill="url(#gw-b-sky)"/>
+<path d="M0 192 Q60 187 120 191 T240 190 T360 192 L360 310 L0 310 Z" fill="url(#gw-b-soil)"/>
+<path d="M0 192 Q60 187 120 191 T240 190 T360 192 L360 310 L0 310 Z" fill="url(#gw-b-dots)"/>
+<path d="M0 192 Q60 187 120 191 T240 190 T360 192" fill="none" stroke="#7fa35a" stroke-width="3"/>
+<path d="M0 236 Q22 231 45 236 T90 236 T135 236 T180 236 T225 236 T270 236 T315 236 T360 236 L360 310 L0 310 Z" fill="url(#gw-b-water)"/>
+<path d="M0 236 Q22 231 45 236 T90 236 T135 236 T180 236 T225 236 T270 236 T315 236 T360 236" fill="none" stroke="#1f5f8b" stroke-width="1.5"/>
+<line x1="0" y1="225" x2="360" y2="225" stroke="#1f5f8b" stroke-width="1" stroke-dasharray="4 3" opacity="0.8"/>
+<text x="356" y="221" text-anchor="end" font-size="10" fill="#1f5f8b" stroke="#eadfcb" stroke-width="3" paint-order="stroke">max. Grundwasserstand</text>
+<path d="M48 219 Q150 209 252 219 Q262 243 238 259 Q150 273 62 259 Q38 243 48 219 Z" fill="url(#gw-b-glow)"/>
+<path d="M48 219 Q150 209 252 219 Q262 243 238 259 Q150 273 62 259 Q38 243 48 219 Z" fill="url(#gw-b-hatch)" opacity="0.55"/>
+<text x="10" y="258" font-size="12" font-weight="700" fill="#1f5f8b">Grundwasser</text>
+<line x1="12" y1="268" x2="54" y2="268" stroke="#1f5f8b" stroke-width="1.5" marker-end="url(#gw-b-arrow)"/>
+<line x1="304" y1="268" x2="346" y2="268" stroke="#1f5f8b" stroke-width="1.5" marker-end="url(#gw-b-arrow)"/>
+<path d="M56 219 L84 150 L216 150 L244 219 Z" fill="url(#gw-b-old)"/>
+<path d="M76 170 L224 170 M68 190 L232 190 M61 206 L239 206" stroke="#7b7d77" stroke-width="0.8" fill="none"/>
+<text x="150" y="184" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">bestehende Ablagerung</text>
+<text x="150" y="199" text-anchor="middle" font-size="12" fill="#ffffff">bleibt liegen</text>
+<path d="M63 193 L81 146 L219 146 L237 193" fill="none" stroke="#1b5e20" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M63 193 L81 146 L219 146 L237 193" fill="none" stroke="#6fa84a" stroke-width="2" stroke-linejoin="round" transform="translate(0 -4)"/>
+<g stroke="#5c9a3a" stroke-width="1.2" stroke-linecap="round" fill="none"><path d="M88 141 l-2 -5 M91 141 l1 -6 M94 141 l3 -4"/><path d="M102 141 l-2 -5 M105 141 l1 -6 M108 141 l3 -4"/><path d="M116 141 l-2 -5 M119 141 l1 -6 M122 141 l3 -4"/><path d="M130 141 l-2 -5 M133 141 l1 -6 M136 141 l3 -4"/><path d="M144 141 l-2 -5 M147 141 l1 -6 M150 141 l3 -4"/><path d="M158 141 l-2 -5 M161 141 l1 -6 M164 141 l3 -4"/><path d="M172 141 l-2 -5 M175 141 l1 -6 M178 141 l3 -4"/><path d="M186 141 l-2 -5 M189 141 l1 -6 M192 141 l3 -4"/><path d="M200 141 l-2 -5 M203 141 l1 -6 M206 141 l3 -4"/></g>
+<g fill="#1f5f8b" opacity="0.85"><use href="#gw-b-drop" x="112" y="78"/><use href="#gw-b-drop" x="150" y="66"/><use href="#gw-b-drop" x="188" y="80"/><use href="#gw-b-drop" x="131" y="104"/><use href="#gw-b-drop" x="169" y="98"/></g>
+<path d="M214 124 Q236 128 240 160 Q244 190 290 196" fill="none" stroke="#1f5f8b" stroke-width="1.8" stroke-dasharray="5 3" marker-end="url(#gw-b-arrow)"/>
+<text x="268" y="96" font-size="11" fill="#1f5f8b">Regenwasser</text>
+<text x="268" y="109" font-size="11" fill="#1f5f8b">läuft seitlich ab</text>
+<circle cx="226" cy="158" r="2.5" fill="#1a1a1a"/><polyline points="226,158 258,140 266,140" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="268" y="137" font-size="11" font-weight="700" fill="#1b5e20">Abdeckung</text>
+<text x="268" y="150" font-size="11" font-weight="700" fill="#1b5e20">von oben – jetzt</text>
+<rect x="49.0" y="284" width="262" height="20" rx="10" fill="#ffffff" stroke="#c8102e" stroke-width="1.2"/><text x="180" y="298" text-anchor="middle" font-size="11.5" font-weight="700" fill="#c8102e">belasteter Boden bleibt – aber kein Nachschub</text>
+<rect x="10" y="10" width="130" height="24" rx="12" fill="#2e7d32"/><text x="75.0" y="26.5" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Unser Vorschlag</text>
                     </svg>
                 </div>
-                <figcaption>Schematisch, nicht maßstäblich. Rot schraffiert: belasteter Boden unter der Ablagerung. Grundlage: Vorhabensbeschreibung des Betreibers vom 20.12.2023, Kapitel 9.2 und 9.3.3.</figcaption>
+                <figcaption>Schematisch, nicht maßstäblich. Rot schraffiert: belasteter Boden unter der Ablagerung, der bis ins Grundwasser reicht. Grundlage: Vorhabensbeschreibung des Betreibers vom 20.12.2023, Kapitel 9.2 und 9.3.3.</figcaption>
             </figure>
         </section>
 
